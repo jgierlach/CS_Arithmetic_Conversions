@@ -52,3 +52,5 @@ const swapOnesAndZeros = binaryString => {
   }
   return convertedValues
 }
+
+
