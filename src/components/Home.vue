@@ -13,7 +13,7 @@
               <button class="btn" @click="binaryToDecimal">Decimal To Binary</button>
             </div>
             <div class="col s12 m4">
-              <button class="btn" @click="binaryToDecimal">Decimal To Hex</button>
+              <button class="btn" @click="hexadecimalConversion">Decimal To Hex</button>
             </div>
             <div class="col s12 m4">
               <button class="btn" @click="binaryToDecimal">Binary To Decimal</button>
@@ -57,6 +57,9 @@ export default {
     },
     binaryAddition() {
       this.$router.push('/binary-addition')
+    },
+    hexadecimalConversion() {
+      this.$router.push('/hexadecimal-conversions')
     }
   }
 }
