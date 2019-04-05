@@ -1,9 +1,9 @@
 <template>
-  <footer class="page-footer keep-footer-down white-background z-depth-4">
+<div></div>
+  <!-- <footer id="footer" class="page-footer white-background z-depth-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
         </div>
         <div class="col l4 offset-l2 s12"></div>
       </div>
@@ -14,7 +14,7 @@
         <a class="black-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </template>
 
 <style scoped>
@@ -32,5 +32,15 @@
   width: 100%;
   display: block;
 }
+
+#footer {
+  display: block;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
 </style>
 
