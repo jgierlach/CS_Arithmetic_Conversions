@@ -35,7 +35,7 @@ import {
   appendZeroes,
   removeNegativeSign,
   swapOnesAndZeros
-} from './util_functions.js'
+} from './one_two_complement_util_functions.js'
 
 export default {
   data() {

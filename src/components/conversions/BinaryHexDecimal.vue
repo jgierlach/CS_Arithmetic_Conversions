@@ -118,13 +118,13 @@ export default {
       const binaryValues = []
       while (int != 0) {
         binaryValues.unshift(int % 2)
-        int = Math.floor(int / 2)
         // Lets add some operations to our array
         this.decimalToBinaryConversionArr.push(
           `2 goes into ${int}, ${Math.floor(
             int / 2
           )} times with a remainder of ${int % 2}`
         )
+        int = Math.floor(int / 2)
       }
       // make sure the other block of conditional render is not showing
       this.showDecimalToBinaryConversionOperations = false
