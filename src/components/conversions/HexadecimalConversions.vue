@@ -1,10 +1,14 @@
 <template>
-  <div>
-    <div class="container center white-background padding move-down z-depth-4">
-      <h3>Convert hexadecimal values!</h3>
-    </div>
+  <div class="container">
+    
     <transition name="slide" appear>
       <div class="container center white-background padding move-down z-depth-4">
+        <h3>Convert hexadecimal values!</h3>
+      </div>
+    </transition>
+
+    <transition name="slide" appear>
+      <div class="center white-background padding move-down z-depth-4">
         <!-- This row contains the input tag that we will get the userInput from -->
         <div class="row">
           <div class="col s12 input-field">
@@ -36,7 +40,7 @@
     <transition name="fade">
       <div
         v-if="showDecimalToHexConversionOperations"
-        class="row container center white-background move-down padding z-depth-4"
+        class="row center white-background move-down padding z-depth-4"
       >
         <div class="col s12">
           <h3>Steps In Conversion</h3>
@@ -52,7 +56,7 @@
     <transition name="fade">
       <div
         v-if="showHexToDecimalConversionOperations"
-        class="row container center white-background move-down padding z-depth-4"
+        class="row center white-background move-down padding z-depth-4"
       >
         <div class="col s12">
           <h3>Steps In Conversion</h3>
