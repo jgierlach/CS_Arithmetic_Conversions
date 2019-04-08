@@ -183,7 +183,7 @@ export default {
             zeroCount = 0
           }
         }
-        return result.reverse().join('')
+        return result.join('')
       }
 
       if (isEqualLength(this.value1, this.value2)) {
