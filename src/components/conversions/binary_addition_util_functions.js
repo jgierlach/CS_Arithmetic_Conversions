@@ -1,11 +1,11 @@
 export {
-    isEqualLength,
-    theLongerValue,
-    theShorterValue,
-    differenceInLength,
-    appendZeros,
-    addInputs,
-    binaryAddition
+  isEqualLength,
+  theLongerValue,
+  theShorterValue,
+  differenceInLength,
+  appendZeros,
+  addInputs,
+  binaryAddition
 }
 
 // return true if the input lengths are equal false if they're not
@@ -65,6 +65,7 @@ const addInputs = (num1, num2) => {
     cue.push(num1[i])
     // push num2s value to the cue
     cue.push(num2[i])
+
     // the amount of 1s and 0's in the cue are counted
     cue.forEach(i => {
       i == '1' ? oneCount++ : zeroCount++
@@ -73,14 +74,14 @@ const addInputs = (num1, num2) => {
     // the conditionals for the cue length being 2
     if (cue.length == 2) {
       if (oneCount == 2) {
-        result.push('0')
+        result.unshift('0')
         cue = []
         cue.push('1')
       } else if (oneCount == 1) {
-        result.push('1')
+        result.unshift('1')
         cue = []
-      } else if (zeroCount == 2) {
-        result.push('0')
+      } else if (zeroCount == 2 && i != num1.length) {
+        result.unshift('0')
         cue = []
       }
       // reset one and zero counts
@@ -90,15 +91,15 @@ const addInputs = (num1, num2) => {
       // the conditonals for the cue having 3 items in it
     } else if (cue.length == 3) {
       if (zeroCount == 2) {
-        result.push('1')
+        result.unshift('1')
         cue = []
       } else if (oneCount == 2) {
-        result.push('0')
+        result.unshift('0')
         cue = []
         // in this instance we will carry a 1
         cue.push('1')
       } else if (oneCount == 3) {
-        result.push('1')
+        result.unshift('1')
         // reset the cue
         cue = []
         // in this case we will carry a 1
@@ -109,7 +110,7 @@ const addInputs = (num1, num2) => {
       zeroCount = 0
     }
   }
-  return result.reverse().join('')
+  return result.join('')
 }
 
 // This is where the magic happens and we do our adding

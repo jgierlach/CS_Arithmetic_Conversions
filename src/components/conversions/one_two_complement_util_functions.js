@@ -1,11 +1,11 @@
 export {
-    isNegative,
-    convertToBinary,
-    appendZeroes,
-    removeNegativeSign,
-    swapOnesAndZeros
+  isNegative,
+  convertToBinary,
+  appendZeroes,
+  removeNegativeSign,
+  swapOnesAndZeros,
+  onesComplementConversion
 }
-
 
 // evaluates whether the input is negative or positive
 const isNegative = input => {
@@ -53,4 +53,29 @@ const swapOnesAndZeros = binaryString => {
   return convertedValues
 }
 
-
+const onesComplementConversion = input => {
+  // We'll store the our converted values here
+  let convertedValues = []
+  // Check that the input is negative
+  if (isNegative(input)) {
+    // We know we have a negative number so let's remove that negative sign
+    input = removeNegativeSign(input)
+    // convert the input to normal binary
+    let binaryString = convertToBinary(input)
+    // if the length of this value is less than our allotted 8 bits we will have to append 0's until it is
+    if (binaryString.length < 8) {
+      // We determine the number of values we must append by subtracting the length of the string form 8
+      let numValuesToAppend = 8 - binaryString.length
+      binaryString = appendZeroes(binaryString, numValuesToAppend)
+    }
+    // For the one's onesComplementConversion perform the swap of 1's and swapOnesAndZeros
+    convertedValues = swapOnesAndZeros(binaryString)
+    // return converted array values as a string
+    return convertedValues.join('')
+  } else {
+    return (
+      'The value you entered was not negative so it was just converted to normal binary ' +
+      convertToBinary(input)
+    )
+  }
+}

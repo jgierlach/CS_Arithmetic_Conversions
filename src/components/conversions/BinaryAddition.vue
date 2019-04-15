@@ -131,7 +131,7 @@ export default {
                 `The sum so far is ${result.join('')}`
               )
               cue = []
-            } else if (zeroCount == 2) {
+            } else if (zeroCount == 2 && i != num1.length) {
               result.unshift('0')
               this.binaryAdditionOperationsArr.push(
                 `We're adding 0 and 0 together. This will result in a value of 0 and a carry of nothing.`
@@ -183,7 +183,7 @@ export default {
             zeroCount = 0
           }
         }
-        return result.join('')
+        return result.splice(1, result.length).join('')
       }
 
       if (isEqualLength(this.value1, this.value2)) {
