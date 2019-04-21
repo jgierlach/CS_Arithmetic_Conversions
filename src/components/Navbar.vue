@@ -14,6 +14,13 @@
           </a>
         </router-link>
 
+        <router-link to="/conversions" tag="li" class="black-text">
+          <a class="dropdown-trigger black-text" data-target="dropdown1">
+            Example Problems
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </router-link>
+
         <router-link to="/about" tag="li">
           <a class="black-text">About</a>
         </router-link>
@@ -24,7 +31,34 @@
 
       </ul>
 
-      <!-- Dropdown Structure -->
+      <!-- Dropdown Structure for conversions -->
+      <ul id="dropdown1" class="dropdown-content">
+        <router-link to="/" tag="li" class="black-text" exact>
+          <a class="black-text">Binary To Decimal</a>
+        </router-link>
+        <li class="divider"></li>
+        <router-link to="/" tag="li" class="black-text" exact>
+          <a class="black-text">Decimal To Binary</a>
+        </router-link>
+        <li class="divider"></li>
+        <router-link to="/" tag="li" class="black-text" exact>
+          <a class="black-text">Decimal To Hex</a>
+        </router-link>
+        <li class="divider"></li>
+        <router-link to="/" tag="li" class="black-text" exact>
+          <a class="black-text">IEEE 754</a>
+        </router-link>
+        <li class="divider"></li>
+        <router-link to="/" tag="li" class="black-text" exact>
+          <a class="black-text">Ones And Twos Complement</a>
+        </router-link>
+        <li class="divider"></li>
+        <router-link to="/" tag="li" class="black-text" exact>
+          <a class="black-text">Binary Addition</a>
+        </router-link>
+      </ul>
+
+       <!-- Dropdown Structure for conversions with examples -->
       <ul id="dropdown1" class="dropdown-content">
         <router-link to="/" tag="li" class="black-text" exact>
           <a class="black-text">Binary To Decimal</a>

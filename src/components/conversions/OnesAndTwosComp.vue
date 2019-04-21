@@ -33,10 +33,33 @@
               <h3>{{ output }}</h3>
             </div>
           </div>
-          <!-- This is where the user will be able to see step by step how the conversion happens -->
         </div>
       </transition>
     </div>
+    
+    <!-- This is where the user will be able to see step by step how the ones complement conversion happens -->
+    <transition name="fade" appear>
+      <div
+        v-if="showOnesComplementOperations"
+        class="row container center white-background move-down padding z-depth-4"
+      >
+        <div class="col s12">
+          <h3>Steps in conversion</h3>
+        </div>
+      </div>
+    </transition>
+
+    <!-- This is where the user will be to see step by step how the twos complement conversion -->
+    <transition name="fade" appear>
+      <div
+        v-if="showTwosComplementOperations"
+        class="container center white-background padding move-down z-depth-4 row"
+      >
+        <div class="col s12">
+          <h3>Steps in conversion</h3>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -64,16 +87,27 @@ export default {
   data() {
     return {
       userInput: '',
-      output: 'The result of your conversion will appear here!'
+      output: 'The result of your conversion will appear here!',
+      showOnesComplementOperations: false,
+      showTwosComplementOperations: false
     }
   },
   methods: {
     convertToOnesComp() {
+      // set the output equal to the result of the ones complement conversion
       this.output = onesComplementConversion(this.userInput)
+      // make sure the other window does not show
+      this.showTwosComplementOperations = false
+      // show the operations of the
+      this.showOnesComplementOperations = true
     },
     convertToTwosComp() {
+      // get the ones complement
       let onesComp = onesComplementConversion(this.userInput)
+      // twos complement is ones complement with 1 added to it
       this.output = binaryAddition(onesComp, '1')
+      this.showOnesComplementOperations = false
+      this.showTwosComplementOperations = true
     }
   }
 }

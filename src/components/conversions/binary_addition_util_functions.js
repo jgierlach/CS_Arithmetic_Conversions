@@ -100,7 +100,6 @@ const addInputs = (num1, num2) => {
         cue.push('1')
       } else if (oneCount == 3) {
         result.unshift('1')
-        // reset the cue
         cue = []
         // in this case we will carry a 1
         cue.push('1')

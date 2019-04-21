@@ -1,29 +1,38 @@
 <template>
   <div>
     <transition name="slide" appear>
-      <div class="container center white-background padding move-down z-depth-4">
-        <!-- This row contains the input tag that we will get the userInput from -->
-        <div class="row">
-          <div class="col s12 input-field">
-            <!-- <label for="firstName">Value To Convert</label> -->
-            <input type="text" v-model="userInput">
-          </div>
+      <div class="container">
+        <!-- The header introducing what this conversion does -->
+        <div class="container center white-background padding move-down z-depth-4">
+          <h3>Convert binary to decimal and decimal to binary</h3>
         </div>
-        <!-- This row contains the buttons for the initial conversions -->
-        <div class="row">
-          <!-- This column contains a button that will convert binary to decimal -->
-          <div class="col s12 m6">
-            <button class="btn" @click="convertBinaryToDecimal">Convert Binary To Decimal</button>
+
+        <div class="center white-background padding move-down z-depth-4">
+          <!-- This row contains the input tag that we will get the userInput from -->
+          <div class="row">
+            <div class="col s12 input-field">
+              <!-- <label for="firstName">Value To Convert</label> -->
+              <input type="text" v-model="userInput">
+            </div>
           </div>
-          <!-- This column contains a button that will convert decimal to binary -->
-          <div class="col s12 m6">
-            <button class="btn" @click="convertDecimalToBinary">Convert Decimal To Binary</button>
+          <!-- This row contains the buttons for the initial conversions -->
+          <div class="row">
+            <!-- This column contains a button that will convert binary to decimal -->
+            <div class="col s12 m6">
+              <button class="btn" @click="convertBinaryToDecimal">Convert Binary To Decimal</button>
+            </div>
+            <!-- This column contains a button that will convert decimal to binary -->
+            <div class="col s12 m6">
+              <button class="btn" @click="convertDecimalToBinary">Convert Decimal To Binary</button>
+            </div>
           </div>
-        </div>
-        <!-- This is where the user can immediately see the result of their conversion -->
-        <div class="row">
-          <div class="col s12">
-            <h3>{{ output }}</h3>
+          <!-- This is where the user can immediately see the result of their conversion -->
+          <div class="container">
+            <div class="container move-down row center white-background z-depth-4">
+              <div class="col s12">
+                <h5>{{ output }}</h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>

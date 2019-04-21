@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    
     <transition name="slide" appear>
       <div class="container center white-background padding move-down z-depth-4">
         <h3>Convert hexadecimal values!</h3>
+        <button class="btn" @click="decimalToHexPractice">Practice Problems</button>
       </div>
     </transition>
 
@@ -100,6 +100,10 @@ export default {
     }
   },
   methods: {
+    // navigate to page where we can practice the conversion
+    decimalToHexPractice() {
+      this.$router.push('/hexadecimal-practice-problems')
+    },
     convertDecimalToHex() {
       // clear the operations arr of previous values
       this.decimalToHexConversionArr = []

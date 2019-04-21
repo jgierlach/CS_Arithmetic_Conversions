@@ -6,6 +6,8 @@ import BinaryHexDecimal from './components/conversions/BinaryHexDecimal.vue'
 import IEEE754 from './components/conversions/IEEE754.vue'
 import OnesAndTwosComp from './components/conversions/OnesAndTwosComp.vue'
 import HexadecimalConversions from './components/conversions/HexadecimalConversions.vue'
+// the practice problem components
+import HexPracticeProblems from './components/practice_problems/hexadecimal_practice_problems.vue'
 
 export const routes = [
   {path: '/', component: Home},
@@ -16,5 +18,6 @@ export const routes = [
   {path: '/ieee-754', component: IEEE754},
   {path: '/ones-and-twos-complement', component: OnesAndTwosComp},
   {path: '/hexadecimal-conversions', component: HexadecimalConversions},
+  {path: '/hexadecimal-practice-problems', component: HexPracticeProblems},
   {path: '*', redirect: '/'}
 ]
