@@ -2,11 +2,13 @@
   <div>
     <transition name="slide" appear>
       <div>
-        <!-- Tag line -->
-        <div class="container padding white-background move-down z-depth-4 center">
-            <h3>Your computer science conversions with explanations!</h3>
+        <div class="container">
+          <div class="container padding white-background move-down z-depth-4 center">
+            <!-- Tag line -->
+            <h2>Your computer science conversions with explanations!</h2>
+          </div>
         </div>
-        <!-- Home page list item -->
+        <!-- Home page list of topics -->
         <appHomePageList></appHomePageList>
       </div>
     </transition>
@@ -16,23 +18,6 @@
 <script>
 import HomePageList from './HomePageList.vue'
 export default {
-  methods: {
-    binaryToDecimal() {
-      this.$router.push('/binary-hex-decimal')
-    },
-    floatingPoint() {
-      this.$router.push('/ieee-754')
-    },
-    onesAndTwosComp() {
-      this.$router.push('/ones-and-twos-complement')
-    },
-    binaryAddition() {
-      this.$router.push('/binary-addition')
-    },
-    hexadecimalConversion() {
-      this.$router.push('/hexadecimal-conversions')
-    }
-  },
   components: {
     appHomePageList: HomePageList
   }

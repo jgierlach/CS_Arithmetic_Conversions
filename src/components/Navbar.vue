@@ -106,8 +106,16 @@ export default {}
   background: white;
 }
 
+.teal-background {
+  background: #009688;
+}
+
 .black-text {
   color: black;
+}
+
+.fixed {
+  position: fixed;
 }
 </style>
 

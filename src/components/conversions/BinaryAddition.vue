@@ -80,6 +80,8 @@ export default {
     //   this.output = binaryAddition(this.value1, this.value2)
     // }
     addBinaryNumbers() {
+      // reset the the binaryAddditionOperationsArr to get rid of old operations stored in there
+      this.binaryAdditionOperationsArr = []
       // add inputs function
       const addInputs = (num1, num2) => {
         // counts the amount of 0s

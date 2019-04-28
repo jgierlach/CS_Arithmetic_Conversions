@@ -1,20 +1,24 @@
 <template>
-  <div class="row padding white-background move-down z-depth-4 center">
+  <div class="padding white-background move-down z-depth-4 center">
     <!-- Code block to display the type of conversion -->
-    <div class="col s6">
-      <h4>{{listItem.conversionType}}</h4>
+    <div class="row">
+      <div class="col s12">
+        <h2>{{listItem.conversionType}}</h2>
+      </div>
     </div>
     <!-- Code block for button to navigate to conversion -->
-    <div class="col s2">
-      <button class="btn" @click="goToConversion">Conversion</button>
-    </div>
-    <!-- Code block for button to navigate to explanation -->
-    <div class="col s2">
-      <button class="btn" @click="goToExplanation">Explanation</button>
-    </div>
-    <!-- Code block for button to navigate to practice problems -->
-    <div class="col s2">
-      <button class="btn" @click="goToPracticeProblems">Practice</button>
+    <div class="row">
+      <div class="col s12 m4">
+        <button class="btn-large" @click="goToConversion">Conversion</button>
+      </div>
+      <!-- Code block for button to navigate to explanation -->
+      <div class="col s12 m4">
+        <button class="btn-large" @click="goToExplanation">Explanation</button>
+      </div>
+      <!-- Code block for button to navigate to practice problems -->
+      <div class="col s12 m4">
+        <button class="btn-large" @click="goToPracticeProblems">Practice</button>
+      </div>
     </div>
   </div>
 </template>

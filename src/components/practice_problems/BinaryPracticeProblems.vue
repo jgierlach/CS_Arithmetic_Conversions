@@ -1,5 +1,16 @@
 <template>
-    <div class="container">
-        <h1>Binary Conversion Practice Problems</h1>
-    </div>
+  <div>
+    <transition name="slide" appear>
+      <app-binary-problem-list></app-binary-problem-list>
+    </transition>
+  </div>
 </template>
+
+<script>
+import BinaryProblemList from './BinaryProblemList.vue'
+export default {
+  components: {
+    appBinaryProblemList: BinaryProblemList
+  }
+}
+</script>
