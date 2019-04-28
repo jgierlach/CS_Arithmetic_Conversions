@@ -1,49 +1,20 @@
 <template>
-  <div class="container">
-    <!-- Tag line -->
+  <div>
     <transition name="slide" appear>
       <div>
+        <!-- Tag line -->
         <div class="container padding white-background move-down z-depth-4 center">
-          <h3>Your computer science conversions with explanations!</h3>
+            <h3>Your computer science conversions with explanations!</h3>
         </div>
-        <!-- Button navigations to the different conversions -->
-        <div class="padding white-background move-down z-depth-4 center">
-          <div class="row">
-            <div class="col s12 m4">
-              <button class="btn" @click="binaryToDecimal">Decimal To Binary</button>
-            </div>
-            <div class="col s12 m4">
-              <button class="btn" @click="hexadecimalConversion">Decimal To Hex</button>
-            </div>
-            <div class="col s12 m4">
-              <button class="btn" @click="binaryToDecimal">Binary To Decimal</button>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col s12 m12">
-              <button class="btn" @click="floatingPoint">Floating Point to IEEE 754</button>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col s12 m4">
-              <button class="btn" @click="onesAndTwosComp">Ones Complement</button>
-            </div>
-            <div class="col s12 m4">
-              <button class="btn" @click="binaryAddition">Binary Addition</button>
-            </div>
-            <div class="col s12 m4">
-              <button class="btn" @click="onesAndTwosComp">Twos Complement</button>
-            </div>
-          </div>
-        </div>
+        <!-- Home page list item -->
+        <appHomePageList></appHomePageList>
       </div>
     </transition>
   </div>
 </template>
 
 <script>
+import HomePageList from './HomePageList.vue'
 export default {
   methods: {
     binaryToDecimal() {
@@ -61,6 +32,9 @@ export default {
     hexadecimalConversion() {
       this.$router.push('/hexadecimal-conversions')
     }
+  },
+  components: {
+    appHomePageList: HomePageList
   }
 }
 </script>

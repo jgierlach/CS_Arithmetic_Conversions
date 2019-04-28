@@ -68,11 +68,12 @@ const onesComplementConversion = input => {
       let numValuesToAppend = 8 - binaryString.length
       binaryString = appendZeroes(binaryString, numValuesToAppend)
     }
-    // For the one's onesComplementConversion perform the swap of 1's and swapOnesAndZeros
+    // For the one's onesComplementConversion perform the swap of 1s and 0s
     convertedValues = swapOnesAndZeros(binaryString)
     // return converted array values as a string
     return convertedValues.join('')
   } else {
+    // the user didn't enter a negative number so give them an error message
     return (
       'The value you entered was not negative so it was just converted to normal binary ' +
       convertToBinary(input)
