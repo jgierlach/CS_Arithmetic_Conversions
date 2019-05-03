@@ -36,7 +36,7 @@
         </div>
       </transition>
     </div>
-    
+
     <!-- This is where the user will be able to see step by step how the ones complement conversion happens -->
     <transition name="fade" appear>
       <div
@@ -56,7 +56,8 @@
         class="container center white-background padding move-down z-depth-4 row"
       >
         <div class="col s12">
-          <h3>Steps in conversion</h3>
+          <!-- <h3>Steps in conversion</h3> -->
+          <h3 v-for="(index, operation) in operationsArr" :key="index">{{operation}}</h3>
         </div>
       </div>
     </transition>
@@ -64,36 +65,23 @@
 </template>
 
 <script>
-import {
-  isNegative,
-  convertToBinary,
-  appendZeroes,
-  removeNegativeSign,
-  swapOnesAndZeros,
-  onesComplementConversion
-} from './one_two_complement_util_functions.js'
-
-import {
-  isEqualLength,
-  theLongerValue,
-  theShorterValue,
-  differenceInLength,
-  appendZeros,
-  addInputs,
-  binaryAddition
-} from './binary_addition_util_functions.js'
+import {onesComplementConversion} from './one_two_complement_util_functions.js'
+import {binaryAddition} from './binary_addition_util_functions.js'
 
 export default {
   data() {
     return {
       userInput: '',
       output: 'The result of your conversion will appear here!',
+      operationsArr: [],
       showOnesComplementOperations: false,
       showTwosComplementOperations: false
     }
   },
   methods: {
     convertToOnesComp() {
+      // reset the operatoins arr to get rid of previous operations
+      this.operationsArr = []
       // set the output equal to the result of the ones complement conversion
       this.output = onesComplementConversion(this.userInput)
       // make sure the other window does not show

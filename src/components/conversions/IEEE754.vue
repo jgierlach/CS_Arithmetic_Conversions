@@ -1,8 +1,11 @@
 <template>
   <div>
     <transition name="slide" appear>
-      <div>
+      <div class=container>
         <div class="container center white-background padding move-down z-depth-4">
+          <h3>Convert Floating Point to IEEE754 Format</h3>
+        </div>
+        <div class="center white-background padding move-down z-depth-4">
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
@@ -41,9 +44,7 @@ export default {
     }
   },
   methods: {
-    convertToIEEE754() {
-      
-    }
+    convertToIEEE754() {}
   }
 }
 </script>

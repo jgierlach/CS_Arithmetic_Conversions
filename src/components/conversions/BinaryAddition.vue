@@ -33,22 +33,21 @@
             </div>
           </div>
         </div>
+      </div>
+    </transition>
 
-        <!-- conditionally render some code if they hit the add button -->
-        <div
-          class="row center white-background move-down padding z-depth-4"
-          v-if="showAdditionOperations"
-        >
-          <div class="col s12">
-            <h3>Steps In Conversion</h3>
-            <!-- Here is where we are displaying all the steps involved in the conversion -->
-            <h3
-              :key="index"
-              v-for="(operation, index) in binaryAdditionOperationsArr"
-            >{{ operation }}</h3>
-            <!-- Here we display the final answer -->
-            <h1>Final answer = {{ output }}</h1>
-          </div>
+    <transition name="fade" appear>
+      <!-- conditionally render some code if they hit the add button -->
+      <div
+        class="container row center white-background move-down padding z-depth-4"
+        v-if="showAdditionOperations"
+      >
+        <div class="col s12">
+          <h3>Steps In Conversion</h3>
+          <!-- Here is where we are displaying all the steps involved in the conversion -->
+          <h3 :key="index" v-for="(operation, index) in binaryAdditionOperationsArr">{{ operation }}</h3>
+          <!-- Here we display the final answer -->
+          <h1>Final Answer = {{ output }}</h1>
         </div>
       </div>
     </transition>

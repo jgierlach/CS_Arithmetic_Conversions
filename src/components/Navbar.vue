@@ -1,104 +1,162 @@
 <template>
-  <nav class="white-background z-depth-3">
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!-- Link to home component -->
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Home</a>
-        </router-link>
+  <div class="navbar-fixed">
+    <nav class="white-background z-depth-3">
+      <div class="nav-wrapper">
+        <!-- Hamburger icon for mobile nav -->
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
 
-        <!-- Drop down menu for all the conversions available -->
-        <router-link to="/conversions" tag="li" class="black-text">
-          <a class="dropdown-trigger black-text" data-target="dropdown1">
-            Conversions
-            <i class="material-icons right">arrow_drop_down</i>
-          </a>
-        </router-link>
+        <!-- Beginning of desktop nav -->
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <!-- Link to home component -->
+          <router-link to="/" tag="li" class="black-text" activeClass="active" exact>
+            <a class="black-text">Home</a>
+          </router-link>
 
-        <!-- Drop down menu for all the explanations available -->
-        <router-link to="/conversions" tag="li" class="black-text">
-          <a class="dropdown-trigger black-text" data-target="dropdown1">
-            Explanations
-            <i class="material-icons right">arrow_drop_down</i>
-          </a>
-        </router-link>
+          <!-- Drop down menu for all the conversions available -->
+          <router-link to="/" tag="li" class="black-text">
+            <a class="dropdown-trigger black-text" data-target="dropdown1">
+              Conversions
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </router-link>
 
-        <!-- Drop down menu for all the practice problems available -->
-        <router-link to="/conversions" tag="li" class="black-text">
-          <a class="dropdown-trigger black-text" data-target="dropdown1">
-            Practice Problems
-            <i class="material-icons right">arrow_drop_down</i>
-          </a>
-        </router-link>
+          <!-- Drop down menu for all the explanations available -->
+          <router-link to="/" tag="li" class="black-text">
+            <a class="dropdown-trigger black-text" data-target="dropdown2">
+              Explanations
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </router-link>
 
-        <router-link to="/about" tag="li">
-          <a class="black-text">About</a>
-        </router-link>
+          <!-- Drop down menu for all the practice problems available -->
+          <router-link to="/" tag="li" class="black-text">
+            <a class="dropdown-trigger black-text" data-target="dropdown3">
+              Practice Problems
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </router-link>
 
-        <router-link to="/contact" tag="li" class="black-text">
-          <a class="black-text">Contact</a>
-        </router-link>
-      </ul>
+          <router-link to="/about" tag="li" activeClass="active">
+            <a class="black-text">About</a>
+          </router-link>
 
-      <!-- Dropdown Structure for conversions -->
-      <ul id="dropdown1" class="dropdown-content">
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Binary To Decimal</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Decimal To Binary</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Decimal To Hex</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">IEEE 754</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Ones And Twos Complement</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Binary Addition</a>
-        </router-link>
-      </ul>
+          <router-link to="/contact" tag="li" class="black-text" activeClass="active">
+            <a class="black-text">Contact</a>
+          </router-link>
+        </ul>
 
-      <!-- Dropdown Structure for conversions with examples -->
-      <ul id="dropdown1" class="dropdown-content">
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Binary To Decimal</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Decimal To Binary</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Decimal To Hex</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">IEEE 754</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Ones And Twos Complement</a>
-        </router-link>
-        <li class="divider"></li>
-        <router-link to="/" tag="li" class="black-text" exact>
-          <a class="black-text">Binary Addition</a>
-        </router-link>
-      </ul>
-    </div>
-  </nav>
+        <!-- Dropdown Structure for conversions tab -->
+        <ul id="dropdown1" class="dropdown-content">
+          <router-link to="/binary-hex-decimal" tag="li" class="black-text" exact>
+            <a class="black-text">Binary To Decimal</a>
+          </router-link>
+          <li class="divider"></li>
+          <router-link to="/binary-hex-decimal" tag="li" class="black-text" exact>
+            <a class="black-text">Decimal To Binary</a>
+          </router-link>
+          <li class="divider"></li>
+          <router-link to="/hexadecimal-conversions" tag="li" class="black-text" exact>
+            <a class="black-text">Decimal To Hex</a>
+          </router-link>
+          <li class="divider"></li>
+          <router-link to="/ieee-754" tag="li" class="black-text" exact>
+            <a class="black-text">IEEE 754</a>
+          </router-link>
+          <li class="divider"></li>
+          <router-link to="/ones-and-twos-complement" tag="li" class="black-text" exact>
+            <a class="black-text">Ones And Twos Complement</a>
+          </router-link>
+          <li class="divider"></li>
+          <router-link to="/binary-addition" tag="li" class="black-text" exact>
+            <a class="black-text">Binary Addition</a>
+          </router-link>
+        </ul>
+
+        <!-- Dropdown Structure for explanations tab -->
+        <ul id="dropdown2" class="dropdown-content">
+          <!-- Link to Binary To Decimal Explanation -->
+          <router-link to="/binary-to-decimal-explanation" tag="li" class="black-text" exact>
+            <a class="black-text">Binary To Decimal</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to Decimal to Binary Explanation -->
+          <router-link to="/decimal-to-binary-explanation" tag="li" class="black-text" exact>
+            <a class="black-text">Decimal To Binary</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link Decimal to Hex Explanation -->
+          <router-link to="/decimal-to-hex-explanation" tag="li" class="black-text" exact>
+            <a class="black-text">Decimal To Hex</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to Hex to Decimal Explanation -->
+          <router-link to="/hex-to-decimal-explanation" tag="li" class="black-text" exact>
+            <a class="black-text">Hex To Decimal</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to IEEE754 Explanation -->
+          <router-link to="/ieee754-explanation" tag="li" class="black-text" exact>
+            <a class="black-text">IEEE 754</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to Ones and Twos complement Explanation -->
+          <router-link to="/ones-complement-explanation" tag="li" class="black-text" exact>
+            <a class="black-text">Ones And Twos Complement</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to binary addition Explanation -->
+          <router-link to="/binary-addition-explanation" tag="li" class="black-text" exact>
+            <a class="black-text">Binary Addition</a>
+          </router-link>
+        </ul>
+
+        <!-- Dropdown Structure for practice problems tab -->
+        <ul id="dropdown3" class="dropdown-content">
+          <!-- Link to binary practice problems -->
+          <router-link to="/binary-practice-problems" tag="li" class="black-text" exact>
+            <a class="black-text">Binary</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to hexadecimal practice problems -->
+          <router-link to="/hexadecimal-practice-problems" tag="li" class="black-text" exact>
+            <a class="black-text">Hexadecimal</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to IEEE 754 practice problems -->
+          <router-link to="/ieee-754-practice-problems" tag="li" class="black-text" exact>
+            <a class="black-text">IEEE 754</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to Ones and Twos Complement practice problems -->
+          <router-link
+            to="/ones-and-twos-complement-practice-problems"
+            tag="li"
+            class="black-text"
+            exact
+          >
+            <a class="black-text">Ones And Twos Complement</a>
+          </router-link>
+          <li class="divider"></li>
+          <!-- Link to binary addition practice problems -->
+          <router-link to="/binary-addition-practice-problems" tag="li" class="black-text" exact>
+            <a class="black-text">Binary Addition</a>
+          </router-link>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isActive: false
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -112,10 +170,6 @@ export default {}
 
 .black-text {
   color: black;
-}
-
-.fixed {
-  position: fixed;
 }
 </style>
 
