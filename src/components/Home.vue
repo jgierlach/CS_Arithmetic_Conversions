@@ -3,7 +3,9 @@
     <transition name="slide" appear>
       <div>
         <div class="container">
-          <div class="container padding white-background move-down z-depth-4 center">
+          <div
+            class="container padding white-background move-down z-depth-4 center"
+          >
             <!-- Tag line -->
             <h2>Your computer science conversions with explanations!</h2>
           </div>
@@ -23,7 +25,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 .padding {

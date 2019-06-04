@@ -1,7 +1,15 @@
 <template>
-  <h1>Correct!</h1>
+  <div class="row container center green-background move-down padding z-depth-4">
+    <h3 class="white-text">Correct!</h3>
+  </div>
 </template>
 
 <style>
-</style>
+  .green-background {
+    background: #009688;
+  }
 
+  .white-text {
+    color: white;
+  }
+</style>

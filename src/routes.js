@@ -32,31 +32,46 @@ export const routes = [
   {path: '/', component: Home},
   {path: '/about', component: About},
   {path: '/contact', component: Contact},
-  
+
   // conversion component routes
   {path: '/binary-addition', component: BinaryAddition},
   {path: '/binary-hex-decimal', component: BinaryHexDecimal},
   {path: '/ieee-754', component: IEEE754},
   {path: '/ones-and-twos-complement', component: OnesAndTwosComp},
   {path: '/hexadecimal-conversions', component: HexadecimalConversions},
-  
+
   // explanation component routes
   {path: '/binary-addition-explanation', component: BinaryAdditionExplanation},
-  {path: '/binary-to-decimal-explanation', component: BinaryToDecimalExplanation},
-  {path: '/decimal-to-binary-explanation', component: DecimalToBinaryExplanation},
+  {
+    path: '/binary-to-decimal-explanation',
+    component: BinaryToDecimalExplanation
+  },
+  {
+    path: '/decimal-to-binary-explanation',
+    component: DecimalToBinaryExplanation
+  },
   {path: '/decimal-to-hex-explanation', component: DecimalToHexExplanation},
   {path: '/hex-to-decimal-explanation', component: HexToDecimalExplanation},
   {path: '/ieee754-explanation', component: IEEE754Explanation},
   {path: '/ones-complement-explanation', component: OnesCompExplanation},
   {path: '/twos-complement-explanation', component: TwosCompExplanation},
-  
+
   // practice problems component routes
-  {path: '/binary-addition-practice-problems', component: BinaryAdditionPracticeProblems},
+  {
+    path: '/binary-addition-practice-problems',
+    component: BinaryAdditionPracticeProblems
+  },
   {path: '/binary-practice-problems', component: BinaryPracticeProblems},
-  {path: '/hexadecimal-practice-problems', component: HexadecimalPracticeProblems},
+  {
+    path: '/hexadecimal-practice-problems',
+    component: HexadecimalPracticeProblems
+  },
   {path: '/ieee-754-practice-problems', component: IEEE754PracticeProblems},
-  {path: '/ones-and-twos-complement-practice-problems', component: OnesAndTwosCompPracticeProblems},  
-  
+  {
+    path: '/ones-and-twos-complement-practice-problems',
+    component: OnesAndTwosCompPracticeProblems
+  },
+
   // default redirect to home page for any route that is not identified
   {path: '*', redirect: '/'}
 ]

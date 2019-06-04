@@ -1,5 +1,5 @@
 <template>
-<div></div>
+  <div></div>
   <!-- <footer id="footer" class="page-footer white-background z-depth-4">
     <div class="container">
       <div class="row">
@@ -39,8 +39,6 @@
   padding-bottom: 4rem;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 2.5rem; /* Footer height */
 }
-
 </style>
-

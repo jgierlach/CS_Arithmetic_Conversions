@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <app-single-problem v-for="problem in problemList" :key="problem.id" :problem="problem"></app-single-problem>
+    <app-single-problem
+      v-for="problem in problemList"
+      :key="problem.id"
+      :problem="problem"
+    ></app-single-problem>
   </div>
 </template>
 
@@ -34,12 +38,12 @@ export default {
           id: 5,
           question: 'Convert -44 to ones complement.',
           answer: 11010011
-        },
+        }
       ]
     }
   },
   components: {
-      appSingleProblem: SingleProblem
+    appSingleProblem: SingleProblem
   }
 }
 </script>

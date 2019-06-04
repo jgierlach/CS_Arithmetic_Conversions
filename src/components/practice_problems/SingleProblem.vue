@@ -2,12 +2,12 @@
   <div class="center white-background padding move-down z-depth-4">
     <div class="row">
       <div class="col s12">
-        <h3>{{problem.question}}</h3>
+        <h3>{{ problem.question }}</h3>
       </div>
     </div>
     <div class="row">
       <div class="col s8">
-        <input v-model="userAnswer">
+        <input v-model="userAnswer" />
       </div>
       <div class="col s4">
         <button class="btn" @click="checkAnswer">Check Answer</button>
@@ -49,4 +49,3 @@ export default {
   }
 }
 </script>
-

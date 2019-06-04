@@ -3,7 +3,9 @@
     <transition name="slide" appear>
       <div class="container">
         <!-- The header introducing what this conversion does -->
-        <div class="container center white-background padding move-down z-depth-4">
+        <div
+          class="container center white-background padding move-down z-depth-4"
+        >
           <h3>Convert binary to decimal and decimal to binary</h3>
         </div>
 
@@ -12,23 +14,29 @@
           <div class="row">
             <div class="col s12 input-field">
               <!-- <label for="firstName">Value To Convert</label> -->
-              <input type="text" v-model="userInput">
+              <input type="text" v-model="userInput" />
             </div>
           </div>
           <!-- This row contains the buttons for the initial conversions -->
           <div class="row">
             <!-- This column contains a button that will convert binary to decimal -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertBinaryToDecimal">Convert Binary To Decimal</button>
+              <button class="btn" @click="convertBinaryToDecimal">
+                Convert Binary To Decimal
+              </button>
             </div>
             <!-- This column contains a button that will convert decimal to binary -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertDecimalToBinary">Convert Decimal To Binary</button>
+              <button class="btn" @click="convertDecimalToBinary">
+                Convert Decimal To Binary
+              </button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
           <div class="container">
-            <div class="container move-down row center white-background z-depth-4">
+            <div
+              class="container move-down row center white-background z-depth-4"
+            >
               <div class="col s12">
                 <h5>{{ output }}</h5>
               </div>
@@ -54,7 +62,9 @@
           <h3
             :key="index"
             v-for="(operation, index) in binaryToDecimalConversionArr"
-          >{{ operation }}</h3>
+          >
+            {{ operation }}
+          </h3>
           <!-- Here we display the final answer -->
           <h1>Final answer = {{ output }}</h1>
         </div>
@@ -74,7 +84,9 @@
           <h3
             :key="index"
             v-for="(operation, index) in decimalToBinaryConversionArr"
-          >{{ operation }}</h3>
+          >
+            {{ operation }}
+          </h3>
           <!-- At the end of the conversion steps the final answer is displayed -->
           <h1>Final answer = {{ output }}</h1>
         </div>
@@ -187,4 +199,3 @@ export default {
   }
 }
 </style>
-

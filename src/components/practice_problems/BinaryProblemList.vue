@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <app-single-problem v-for="problem in problemList" :key="problem.id" :problem="problem"></app-single-problem>
+    <app-single-problem
+      v-for="problem in problemList"
+      :key="problem.id"
+      :problem="problem"
+    ></app-single-problem>
   </div>
 </template>
 

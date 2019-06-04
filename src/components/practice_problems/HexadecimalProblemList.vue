@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <app-single-problem v-for="problem in problemList" :key="problem.id" :problem="problem"></app-single-problem>
+    <app-single-problem
+      v-for="problem in problemList"
+      :key="problem.id"
+      :problem="problem"
+    ></app-single-problem>
   </div>
 </template>
 
@@ -34,12 +38,12 @@ export default {
           id: 5,
           question: 'Convert hexadecimal 98E3 to decimal.',
           answer: 39139
-        },
+        }
       ]
     }
   },
   components: {
-      appSingleProblem: SingleProblem
+    appSingleProblem: SingleProblem
   }
 }
 </script>

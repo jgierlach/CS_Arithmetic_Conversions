@@ -5,7 +5,10 @@
         <div class="row">
           <div class="col s12">
             <h3>
-              I built this site because I wanted create something using Vue.js. I thought a resource like this would be helpful to students in intro level Comp Sci classes. If you're interested in seeing the algorithms I wrote to do these operations you can find them
+              I built this site because I wanted create something using Vue.js.
+              I thought a resource like this would be helpful to students in
+              intro level Computer Science classes. If you're interested in seeing the
+              algorithms I wrote to do these operations you can find them
               <a
                 href="https://github.com/jgierlach/conversion_scripts"
                 target="_blank"
@@ -29,6 +32,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
-
+<style></style>

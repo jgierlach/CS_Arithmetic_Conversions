@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <app-single-problem v-for="problem in problemList" :key="problem.id" :problem="problem"></app-single-problem>
+    <app-single-problem
+      v-for="problem in problemList"
+      :key="problem.id"
+      :problem="problem"
+    ></app-single-problem>
   </div>
 </template>
 
@@ -34,12 +38,12 @@ export default {
           id: 5,
           question: 'Add binary values 11111 101010111.',
           answer: 101110110
-        },
+        }
       ]
     }
   },
   components: {
-      appSingleProblem: SingleProblem
+    appSingleProblem: SingleProblem
   }
 }
 </script>

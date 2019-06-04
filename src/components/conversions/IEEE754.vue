@@ -2,7 +2,9 @@
   <div>
     <transition name="slide" appear>
       <div class="container">
-        <div class="container center white-background padding move-down z-depth-4">
+        <div
+          class="container center white-background padding move-down z-depth-4"
+        >
           <h3>Convert Floating Point Values to IEEE754 Format</h3>
         </div>
         <div class="center white-background padding move-down z-depth-4">
@@ -10,17 +12,16 @@
           <div class="row">
             <div class="col s12 input-field">
               <!-- <label for="firstName">Value To Convert</label> -->
-              <input type="text" v-model="userInput">
+              <input type="text" v-model="userInput" />
             </div>
           </div>
           <!-- This row contains the buttons for the IEEE 754 conversion -->
           <div class="row">
             <!-- This column contains a button that will convert floating point to IEEE 754 format -->
             <div class="col s12 m12">
-              <button
-                class="btn"
-                @click="convertToIEEE754"
-              >Convert Floating Point to IEEE 754 format</button>
+              <button class="btn" @click="convertToIEEE754">
+                Convert Floating Point to IEEE 754 format
+              </button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
@@ -38,7 +39,9 @@
         v-if="showIEEEOperations"
         class="container center white-background padding move-down z-depth-4"
       >
-        <h3 v-for="(operation, index) in iEEEOperationsArr" :key="index">{{operation}}</h3>
+        <h3 v-for="(operation, index) in iEEEOperationsArr" :key="index">
+          {{ operation }}
+        </h3>
 
         <table class="centered responsive-table striped">
           <thead>
@@ -71,16 +74,15 @@ export default {
       userInput: '',
       output: '',
       showIEEEOperations: false,
-      iEEEOperationsArr: [],
+      iEEEOperationsArr: []
     }
   },
   methods: {
     convertToIEEE754() {
-     this.output = floatingPoint(this.userInput)
+      this.output = floatingPoint(this.userInput)
     }
   }
 }
 </script>
 
-<style>
-</style>
+<style></style>
