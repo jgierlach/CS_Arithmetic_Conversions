@@ -4,13 +4,3 @@
   </div>
 </template>
 
-<style>
-  .green {
-    background: red;
-  }
-
-  .white-text {
-    color: white;
-  }
-</style>
-

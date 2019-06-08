@@ -18,14 +18,6 @@
 </template>
 
 <style scoped>
-.white-background {
-  background-color: white;
-}
-
-.black-text {
-  color: black;
-}
-
 .keep-footer-down {
   position: fixed;
   bottom: 0;

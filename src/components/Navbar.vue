@@ -244,17 +244,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.white-background {
-  background: white;
-}
-
-.teal-background {
-  background: #009688;
-}
-
-.black-text {
-  color: black;
-}
-</style>

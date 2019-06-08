@@ -222,17 +222,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.white-background {
-  background: white;
-}
-
-.move-down {
-  margin-top: 4em;
-}
-
-.padding {
-  padding: 1em;
-}
-</style>

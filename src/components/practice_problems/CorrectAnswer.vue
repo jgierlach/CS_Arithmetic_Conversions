@@ -3,13 +3,3 @@
     <h3 class="white-text">Correct!</h3>
   </div>
 </template>
-
-<style>
-  .green-background {
-    background: #009688;
-  }
-
-  .white-text {
-    color: white;
-  }
-</style>

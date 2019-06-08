@@ -31,10 +31,6 @@ export default {
   padding: 1.5em;
 }
 
-.white-background {
-  background: white;
-}
-
 .move-down {
   margin-top: 3em;
 }
