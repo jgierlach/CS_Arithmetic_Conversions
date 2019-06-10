@@ -72,7 +72,7 @@ import {
   appendZeros
   // addInputs,
   // binaryAddition
-} from '../../utils/binary_addition_util_functions'
+} from '../../utils/binary_addition'
 export default {
   data() {
     return {
