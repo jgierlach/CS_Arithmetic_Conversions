@@ -2,6 +2,7 @@
 import About from './components/About.vue'
 import Contact from './components/Contact.vue'
 import Home from './components/Home.vue'
+import LandingPage from './components/LandingPage.vue'
 
 // Conversion components
 import BinaryAddition from './components/conversions/BinaryAddition.vue'
@@ -29,7 +30,8 @@ import OnesAndTwosCompPracticeProblems from './components/practice_problems/Ones
 
 export const routes = [
   // main component routes
-  {path: '/', component: Home},
+  {path: '/', component: LandingPage},
+  {path: '/all-conversions', component: Home},
   {path: '/about', component: About},
   {path: '/contact', component: Contact},
 

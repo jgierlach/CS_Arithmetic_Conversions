@@ -3,4 +3,3 @@
     <h3 class="white-text">Wrong!</h3>
   </div>
 </template>
-

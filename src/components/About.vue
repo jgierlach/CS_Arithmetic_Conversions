@@ -5,14 +5,17 @@
         <div class="row">
           <div class="col s12">
             <h3>
-              I built this site because I wanted create something using Vue.js.
-              I thought a resource like this would be helpful to students in
-              intro level Computer Science classes. If you're interested in seeing the
-              algorithms I wrote to do these operations you can find them
+              Hi, my name is Sven Magnus and I appreciate you checking out this
+              project. I built this site because I wanted to learn and create
+              something using Vuejs. I thought a resource like this would be
+              helpful to students in intro level Computer Science classes. If
+              you're interested in seeing the algorithms I wrote to do these
+              operations you can find them
               <a
                 href="https://github.com/jgierlach/conversion_scripts"
                 target="_blank"
-              >here</a>. If you have any questions or feedback feel free to
+                >here</a
+              >. If you have any questions or feedback feel free to
               <a @click="contact">reach out</a> to me.
             </h3>
           </div>
