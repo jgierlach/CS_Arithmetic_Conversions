@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import SingleProblem from './SingleProblem.vue'
+import SingleProblem from '../SingleProblem.vue'
 export default {
   data() {
     return {

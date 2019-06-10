@@ -1,8 +1,8 @@
 // main application components
-import About from './components/About.vue'
-import Contact from './components/Contact.vue'
-import Home from './components/Home.vue'
-import LandingPage from './components/LandingPage.vue'
+import About from './views/About.vue'
+import Contact from './views/Contact.vue'
+import Home from './views/Home.vue'
+import LandingPage from './views/LandingPage.vue'
 
 // Conversion components
 import BinaryAddition from './components/conversions/BinaryAddition.vue'

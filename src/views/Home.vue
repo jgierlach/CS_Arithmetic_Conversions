@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import HomePageList from './HomePageList.vue'
+import HomePageList from '../components/HomePageList.vue'
 export default {
   components: {
     appHomePageList: HomePageList

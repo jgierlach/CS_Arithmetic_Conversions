@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import {floatingPoint} from './iEEE754_util_functions.js'
+import {floatingPoint} from '../../utils/iEEE754_util_functions'
 export default {
   data() {
     return {

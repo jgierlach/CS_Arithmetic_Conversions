@@ -84,8 +84,8 @@ import {
   convertToBinary,
   removeNegativeSign,
   appendZeroes
-} from './one_two_complement_util_functions.js'
-import {binaryAddition} from './binary_addition_util_functions.js'
+} from '../../utils/one_two_complement_util_functions'
+import {binaryAddition} from '../../utils/binary_addition_util_functions'
 
 export default {
   data() {
