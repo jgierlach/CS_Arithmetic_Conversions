@@ -5,7 +5,7 @@
       <div class="container center white-background padding move-down z-depth-4">
         <div class="row">
           <div class="col s12">
-            <h3>Quickly convert between Decimal, Binary, Hexadecimal, and Octal!</h3>
+            <h3>Convert between Decimal, Binary, Hexadecimal, and Octal!</h3>
           </div>
         </div>
         <!-- Call to action button directing the user to the page with the full list of conversions -->
@@ -19,12 +19,12 @@
       <div class="center white-background padding move-down z-depth-4">
         <div class="row">
           <div class="col s6 input-field">
-            <select>
+            <select v-model="selectedConversion">
               <option
                 v-for="(option, index) in options"
                 :key="index"
                 :value="option"
-                :selected="option == '<the default value you want>'"
+                :selected="option == 'Decimal To Binary'"
               >{{ option }}</option>
             </select>
           </div>
@@ -36,7 +36,7 @@
 
         <div class="row">
           <div class="col s12">
-            <button class="btn-large">Convert!</button>
+            <button class="btn-large" @click="convert">Convert!</button>
           </div>
         </div>
 
@@ -54,24 +54,55 @@
 </template>
 
 <script>
+import {decimalToBinary} from '../utils/decimal_to_binary'
+import {binaryToDecimal} from '../utils/binary_to_decimal'
+import {hexadecimalToDecimal} from '../utils/hexadecimal_to_decimal'
+import {decimalToHexadecimal} from '../utils/decimal_to_hexadecimal'
+import {decimalToOctal} from '../utils/decimal_to_octal'
+
 export default {
-  beforeCreate: function() {
-    var elems = document.querySelectorAll('select')
-    var instances = M.FormSelect.init(elems, options)
-    instances.getSelectedValues()
-  },
   data() {
     return {
       userInput: '',
       output: 'The result will appear here!',
       options: [
-        'Decimal To Binary',
-        'Binary To Decimal',
-        'Decimal To Hexadecimal',
+        'Decimal to Binary',
+        'Binary to Decimal',
+        'Decimal to Hexadecimal',
         'Hexadecimal to Decimal',
-        'Decimal To Octal',
-        'Octal To Decimal'
-      ]
+        'Decimal to Octal',
+        'Octal to Decimal'
+      ],
+      selectedConversion: ''
+    }
+  },
+  methods: {
+    convert() {
+      switch (this.selectedConversion) {
+        case 'Decimal to Binary':
+          this.output = `The binary value is ${decimalToBinary(this.userInput)}`
+          break
+        case 'Binary to Decimal':
+          this.output = `The decimal value is ${binaryToDecimal(
+            this.userInput
+          )}`
+          break
+        case 'Decimal to Hexadecimal':
+          this.output = `The hexadecimal value is ${decimalToHexadecimal(
+            this.userInput
+          )}`
+          break
+        case 'Hexadecimal to Decimal':
+          this.output = `The decimal value is ${hexadecimalToDecimal(
+            this.userInput
+          )}`
+          break
+       case 'Decimal to Octal':
+         this.output = `The decimal value is ${decimalToOctal(this.userInput)}`
+         break
+        default:
+          return
+      }
     }
   }
 }

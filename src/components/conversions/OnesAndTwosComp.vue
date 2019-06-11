@@ -81,7 +81,6 @@
 import {
   onesComplementConversion,
   isNegative,
-  convertToBinary,
   removeNegativeSign,
   appendZeroes
 } from '../../utils/one_two_complement'
