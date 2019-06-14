@@ -59,6 +59,7 @@ import {binaryToDecimal} from '../utils/binary_to_decimal'
 import {hexadecimalToDecimal} from '../utils/hexadecimal_to_decimal'
 import {decimalToHexadecimal} from '../utils/decimal_to_hexadecimal'
 import {decimalToOctal} from '../utils/decimal_to_octal'
+import {octalToDecimal} from '../utils/octal_to_decimal'
 
 export default {
   data() {
@@ -97,9 +98,12 @@ export default {
             this.userInput
           )}`
           break
-       case 'Decimal to Octal':
-         this.output = `The decimal value is ${decimalToOctal(this.userInput)}`
-         break
+        case 'Decimal to Octal':
+          this.output = `The octal value is ${decimalToOctal(this.userInput)}`
+          break
+        case 'Octal to Decimal':
+          this.output = `The decimal value is ${octalToDecimal(this.userInput)}`
+          break
         default:
           return
       }
