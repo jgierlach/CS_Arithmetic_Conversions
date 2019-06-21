@@ -2,9 +2,7 @@
   <transition name="slide" appear>
     <div class="container">
       <!-- The header explaining what conversions are possible -->
-      <div
-        class="container center white-background padding move-down z-depth-4"
-      >
+      <div class="container center white-background padding move-down z-depth-4">
         <div class="row">
           <div class="col s12">
             <h3>Convert between Decimal, Binary, Hexadecimal, and Octal!</h3>
@@ -27,13 +25,12 @@
                 :key="index"
                 :value="option"
                 :selected="option == 'Decimal To Binary'"
-                >{{ option }}</option
-              >
+              >{{ option }}</option>
             </select>
           </div>
           <div class="col s6 input-field">
             <label>Value To Convert</label>
-            <input type="text" v-model="userInput" />
+            <input type="text" v-model="userInput">
           </div>
         </div>
 
@@ -45,9 +42,7 @@
 
         <!-- This is where the user can immediately see the result of their conversion -->
         <div class="container">
-          <div
-            class="container move-down row center white-background z-depth-4"
-          >
+          <div class="container move-down row center white-background z-depth-4">
             <div class="col s12">
               <h5>{{ output }}</h5>
             </div>
@@ -67,6 +62,17 @@ import {decimalToOctal} from '../utils/decimal_to_octal'
 import {octalToDecimal} from '../utils/octal_to_decimal'
 
 export default {
+  mounted() {
+    window.addEventListener('load', () => {
+      var elems = document.querySelectorAll('select')
+      var instances = M.FormSelect.init(elems, this.options)
+    })
+    this.$forceUpdate()
+  },
+  updated() {
+    var elems = document.querySelectorAll('select')
+    var instances = M.FormSelect.init(elems, this.options)
+  },
   data() {
     return {
       userInput: '',
@@ -79,7 +85,7 @@ export default {
         'Decimal to Octal',
         'Octal to Decimal'
       ],
-      selectedConversion: ''
+      selectedConversion: 'Decimal To Binary'
     }
   },
   methods: {
