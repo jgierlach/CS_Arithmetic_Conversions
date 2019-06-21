@@ -6,7 +6,7 @@ import Home from './views/Home.vue'
 
 // Conversion components
 import BinaryAddition from './components/conversions/BinaryAddition.vue'
-import BinaryHexDecimal from './components/conversions/BinaryHexDecimal.vue'
+import BinaryDecimal from './components/conversions/BinaryDecimal.vue'
 import IEEE754 from './components/conversions/IEEE754.vue'
 import OnesAndTwosComp from './components/conversions/OnesAndTwosComp.vue'
 import HexadecimalConversions from './components/conversions/HexadecimalConversions.vue'
@@ -36,11 +36,11 @@ export const routes = [
   {path: '/contact', component: Contact},
 
   // conversion component routes
-  {path: '/binary-addition', component: BinaryAddition},
-  {path: '/binary-hex-decimal', component: BinaryHexDecimal},
-  {path: '/ieee-754', component: IEEE754},
-  {path: '/ones-and-twos-complement', component: OnesAndTwosComp},
-  {path: '/hexadecimal-conversions', component: HexadecimalConversions},
+  {path: '/binary-addition-conversion', component: BinaryAddition},
+  {path: '/binary-decimal-conversion', component: BinaryDecimal},
+  {path: '/ieee-754-conversion', component: IEEE754},
+  {path: '/ones-and-twos-complement-conversion', component: OnesAndTwosComp},
+  {path: '/hexadecimal-decimal-conversion', component: HexadecimalConversions},
 
   // explanation component routes
   {path: '/binary-addition-explanation', component: BinaryAdditionExplanation},
@@ -75,5 +75,5 @@ export const routes = [
   },
 
   // default redirect to home page for any route that is not identified
-  {path: '*', redirect: '/'}
+  // {path: '*', redirect: '/'}
 ]

@@ -21,7 +21,7 @@
           </router-link>
 
           <!-- Drop down menu for all the conversions available -->
-          <router-link to="/" tag="li" class="black-text">
+          <router-link to="" tag="li" class="black-text">
             <a class="dropdown-trigger black-text" data-target="dropdown1">
               Convert
               <i class="material-icons right">arrow_drop_down</i>
@@ -29,7 +29,7 @@
           </router-link>
 
           <!-- Drop down menu for all the explanations available -->
-          <router-link to="/" tag="li" class="black-text">
+          <router-link to="" tag="li" class="black-text">
             <a class="dropdown-trigger black-text" data-target="dropdown2">
               Learn
               <i class="material-icons right">arrow_drop_down</i>
@@ -37,7 +37,7 @@
           </router-link>
 
           <!-- Drop down menu for all the practice problems available -->
-          <router-link to="/" tag="li" class="black-text">
+          <router-link to="" tag="li" class="black-text">
             <a class="dropdown-trigger black-text" data-target="dropdown3">
               Practice Problems
               <i class="material-icons right">arrow_drop_down</i>
@@ -61,7 +61,7 @@
         <!-- Dropdown Structure for conversions tab -->
         <ul id="dropdown1" class="dropdown-content">
           <router-link
-            to="/binary-hex-decimal"
+            to="/binary-decimal-conversion"
             tag="li"
             class="black-text"
             exact
@@ -70,7 +70,7 @@
           </router-link>
           <li class="divider"></li>
           <router-link
-            to="/binary-hex-decimal"
+            to="/binary-decimal-conversion"
             tag="li"
             class="black-text"
             exact
@@ -79,7 +79,7 @@
           </router-link>
           <li class="divider"></li>
           <router-link
-            to="/hexadecimal-conversions"
+            to="/hexadecimal-decimal-conversion"
             tag="li"
             class="black-text"
             exact
@@ -92,7 +92,7 @@
           </router-link>
           <li class="divider"></li>
           <router-link
-            to="/ones-and-twos-complement"
+            to="/ones-and-twos-complement-conversion"
             tag="li"
             class="black-text"
             exact
@@ -100,7 +100,7 @@
             <a class="black-text">Ones And Twos Complement</a>
           </router-link>
           <li class="divider"></li>
-          <router-link to="/binary-addition" tag="li" class="black-text" exact>
+          <router-link to="/binary-addition-conversion" tag="li" class="black-text" exact>
             <a class="black-text">Binary Addition</a>
           </router-link>
         </ul>
