@@ -1,8 +1,8 @@
 // main application components
 import About from './views/About.vue'
 import Contact from './views/Contact.vue'
+import AllConversions from './views/AllConversions.vue'
 import Home from './views/Home.vue'
-import LandingPage from './views/LandingPage.vue'
 
 // Conversion components
 import BinaryAddition from './components/conversions/BinaryAddition.vue'
@@ -30,8 +30,8 @@ import OnesAndTwosCompPracticeProblems from './components/practice_problems/Ones
 
 export const routes = [
   // main component routes
-  {path: '/', component: LandingPage},
-  {path: '/all-conversions', component: Home},
+  {path: '/', component: Home},
+  {path: '/all-conversions', component: AllConversions},
   {path: '/about', component: About},
   {path: '/contact', component: Contact},
 
