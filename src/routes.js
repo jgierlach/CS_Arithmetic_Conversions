@@ -5,28 +5,28 @@ import AllConversions from './views/AllConversions.vue'
 import Home from './views/Home.vue'
 
 // Conversion components
-import BinaryAddition from './components/conversions/BinaryAddition.vue'
-import BinaryDecimal from './components/conversions/BinaryDecimal.vue'
-import IEEE754 from './components/conversions/IEEE754.vue'
-import OnesAndTwosComp from './components/conversions/OnesAndTwosComp.vue'
-import HexadecimalConversions from './components/conversions/HexadecimalConversions.vue'
+import BinaryAddition from './views/conversions/BinaryAddition.vue'
+import BinaryDecimal from './views/conversions/BinaryDecimal.vue'
+import IEEE754 from './views/conversions/IEEE754.vue'
+import OnesAndTwosComp from './views/conversions/OnesAndTwosComp.vue'
+import HexadecimalConversions from './views/conversions/HexadecimalConversions.vue'
 
 // Explanation components
-import BinaryAdditionExplanation from './components/explanations/BinaryAdditionExplanation.vue'
-import BinaryToDecimalExplanation from './components/explanations/BinaryToDecimalExplanation.vue'
-import DecimalToBinaryExplanation from './components/explanations/DecimalToBinaryExplanation.vue'
-import DecimalToHexExplanation from './components/explanations/DecimalToHexExplanation.vue'
-import HexToDecimalExplanation from './components/explanations/HexToDecimalExplanation.vue'
-import IEEE754Explanation from './components/explanations/IEEE754Explanation.vue'
-import OnesCompExplanation from './components/explanations/OnesCompExplanation.vue'
-import TwosCompExplanation from './components/explanations/TwosCompExplanation.vue'
+import BinaryAdditionExplanation from './views/explanations/BinaryAdditionExplanation.vue'
+import BinaryToDecimalExplanation from './views/explanations/BinaryToDecimalExplanation.vue'
+import DecimalToBinaryExplanation from './views/explanations/DecimalToBinaryExplanation.vue'
+import DecimalToHexExplanation from './views/explanations/DecimalToHexExplanation.vue'
+import HexToDecimalExplanation from './views/explanations/HexToDecimalExplanation.vue'
+import IEEE754Explanation from './views/explanations/IEEE754Explanation.vue'
+import OnesCompExplanation from './views/explanations/OnesCompExplanation.vue'
+import TwosCompExplanation from './views/explanations/TwosCompExplanation.vue'
 
 // Practice components
-import BinaryAdditionPracticeProblems from './components/practice_problems/BinaryAdditionPracticeProblems.vue'
-import BinaryPracticeProblems from './components/practice_problems/BinaryPracticeProblems.vue'
-import HexadecimalPracticeProblems from './components/practice_problems/HexadecimalPracticeProblems.vue'
-import IEEE754PracticeProblems from './components/practice_problems/IEEE754PracticeProblems.vue'
-import OnesAndTwosCompPracticeProblems from './components/practice_problems/OnesTwosCompPracticeProblems.vue'
+import BinaryAdditionProblemList from './views/practice_problems/BinaryAdditionProblemList.vue'
+import BinaryProblemList from './views/practice_problems/BinaryProblemList.vue'
+import HexadecimalProblemList from './views/practice_problems/HexadecimalProblemList.vue'
+import IEEE754ProblemList from './views/practice_problems/IEEE754ProblemList.vue'
+import OnesAndTwosCompProblemList from './views/practice_problems/OnesTwosCompProblemList.vue'
 
 export const routes = [
   // main component routes
@@ -61,17 +61,17 @@ export const routes = [
   // practice problems component routes
   {
     path: '/binary-addition-practice-problems',
-    component: BinaryAdditionPracticeProblems
+    component: BinaryAdditionProblemList
   },
-  {path: '/binary-practice-problems', component: BinaryPracticeProblems},
+  {path: '/binary-practice-problems', component: BinaryProblemList},
   {
     path: '/hexadecimal-practice-problems',
-    component: HexadecimalPracticeProblems
+    component: HexadecimalProblemList
   },
-  {path: '/ieee-754-practice-problems', component: IEEE754PracticeProblems},
+  {path: '/ieee-754-practice-problems', component: IEEE754ProblemList},
   {
     path: '/ones-and-twos-complement-practice-problems',
-    component: OnesAndTwosCompPracticeProblems
+    component: OnesAndTwosCompProblemList
   },
 
   // default redirect to home page for any route that is not identified

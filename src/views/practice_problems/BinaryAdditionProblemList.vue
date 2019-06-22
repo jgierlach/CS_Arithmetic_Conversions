@@ -1,15 +1,13 @@
 <template>
   <div class="container">
-    <app-single-problem
-      v-for="problem in problemList"
-      :key="problem.id"
-      :problem="problem"
-    ></app-single-problem>
+    <transition name="slide" appear>
+      <app-single-problem v-for="problem in problemList" :key="problem.id" :problem="problem"></app-single-problem>
+    </transition>
   </div>
 </template>
 
 <script>
-import SingleProblem from '../SingleProblem.vue'
+import SingleProblem from '../../components/SingleProblem.vue'
 export default {
   data() {
     return {

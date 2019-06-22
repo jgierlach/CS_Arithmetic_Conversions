@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col s8">
-        <input v-model="userAnswer" />
+        <input v-model="userAnswer">
       </div>
       <div class="col s4">
         <button class="btn" @click="checkAnswer">Check Answer</button>
