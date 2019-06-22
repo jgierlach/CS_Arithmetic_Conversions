@@ -87,7 +87,7 @@
             <a class="black-text">Decimal To Hex</a>
           </router-link>
           <li class="divider"></li>
-          <router-link to="/ieee-754" tag="li" class="black-text" exact>
+          <router-link to="/ieee-754-conversion" tag="li" class="black-text" exact>
             <a class="black-text">IEEE 754</a>
           </router-link>
           <li class="divider"></li>

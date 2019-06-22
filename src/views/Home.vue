@@ -28,9 +28,9 @@
               >{{ option }}</option>
             </select>
           </div>
-          <div class="col s6 input-field">
-            <label>Value To Convert</label>
-            <input type="text" v-model="userInput">
+          <div class="input-field col s6">
+            <label for="valueToConvert">Value To Convert</label>
+            <input id="valueToConvert" type="text" name="userInput" v-model="userInput">
           </div>
         </div>
 
