@@ -1,13 +1,9 @@
 <template>
   <div class="container">
     <transition name="slide" appear>
-      <div
-        class="container center white-background padding move-down z-depth-4"
-      >
+      <div class="container center white-background padding move-down z-depth-4">
         <h3>Convert hexadecimal values!</h3>
-        <button class="btn" @click="decimalToHexPractice">
-          Practice Problems
-        </button>
+        <button class="btn" @click="decimalToHexPractice">Practice Problems</button>
       </div>
     </transition>
 
@@ -16,29 +12,25 @@
         <!-- This row contains the input tag that we will get the userInput from -->
         <div class="row">
           <div class="col s12 input-field">
-            <!-- <label for="firstName">Value To Convert</label> -->
-            <input type="text" v-model="userInput" />
+            <label for="valueToConvert">Value To Convert</label>
+            <input type="text" v-model="userInput">
           </div>
         </div>
         <!-- This row contains the buttons for the initial conversions -->
         <div class="row">
           <!-- This column contains a button that will convert decimal to hex -->
           <div class="col s12 m6">
-            <button class="btn" @click="convertDecimalToHex">
-              Convert Decimal To Hex
-            </button>
+            <button class="btn" @click="convertDecimalToHex">Convert Decimal To Hex</button>
           </div>
           <!-- This column contains a button that will convert hex to decimal -->
           <div class="col s12 m6">
-            <button class="btn" @click="convertHexToDecimal">
-              Convert Hex To Decimal
-            </button>
+            <button class="btn" @click="convertHexToDecimal">Convert Hex To Decimal</button>
           </div>
         </div>
         <!-- This is where the user can immediately see the result of their conversion -->
-        <div class="row">
+        <div class="container move-down row center white-background z-depth-4">
           <div class="col s12">
-            <h3>{{ output }}</h3>
+            <h5>{{ output }}</h5>
           </div>
         </div>
       </div>
@@ -53,12 +45,7 @@
         <div class="col s12">
           <h3>Steps In Conversion</h3>
           <!-- Here is where we are displaying all the steps involved in the conversion -->
-          <h3
-            :key="index"
-            v-for="(operation, index) in decimalToHexConversionArr"
-          >
-            {{ operation }}
-          </h3>
+          <h3 :key="index" v-for="(operation, index) in decimalToHexConversionArr">{{ operation }}</h3>
           <!-- Here we display the final answer -->
           <h1>Final answer = {{ output }}</h1>
         </div>
@@ -75,12 +62,7 @@
           <h3>Steps In Conversion</h3>
 
           <!-- Here is where we are displaying all the steps involved in the conversion -->
-          <h3
-            :key="index"
-            v-for="(operation, index) in hexToDecimalConversionArr"
-          >
-            {{ operation }}
-          </h3>
+          <h3 :key="index" v-for="(operation, index) in hexToDecimalConversionArr">{{ operation }}</h3>
           <!-- At the end of the conversion steps the final answer is displayed -->
           <h1>Final answer = {{ output }}</h1>
         </div>
@@ -94,7 +76,7 @@ export default {
   data() {
     return {
       userInput: '',
-      output: 'The result of your conversion will appear here!',
+      output: 'Converted result will appear here!',
       showDecimalToHexConversionOperations: false,
       showHexToDecimalConversionOperations: false,
       hexToDecimalConversionArr: [],

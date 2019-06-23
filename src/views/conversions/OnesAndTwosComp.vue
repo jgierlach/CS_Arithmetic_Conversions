@@ -3,9 +3,7 @@
     <div class="container">
       <transition name="slide" appear>
         <!-- Header for the ones and twos complement -->
-        <div
-          class="container center white-background padding move-down z-depth-4"
-        >
+        <div class="container center white-background padding move-down z-depth-4">
           <h3>Convert to Ones and Twos Complement</h3>
         </div>
       </transition>
@@ -14,29 +12,25 @@
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
-              <!-- <label for="firstName">Value To Convert</label> -->
-              <input type="text" v-model="userInput" />
+              <label for="valueToConvert">Value To Convert</label>
+              <input type="text" v-model="userInput">
             </div>
           </div>
           <!-- This row contains the buttons for the initial conversions -->
           <div class="row">
             <!-- This column contains a button that will convert negative decimal values to ones complement binary -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertToOnesComp">
-                Convert To Ones Complement
-              </button>
+              <button class="btn" @click="convertToOnesComp">Convert To Ones Complement</button>
             </div>
             <!-- This column contains a button that will convert negative decimal values to twos complement binary -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertToTwosComp">
-                Convert To Twos Complement
-              </button>
+              <button class="btn" @click="convertToTwosComp">Convert To Twos Complement</button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
-          <div class="row">
+          <div class="container move-down row center white-background z-depth-4">
             <div class="col s12">
-              <h3>{{ output }}</h3>
+              <h5>{{ output }}</h5>
             </div>
           </div>
         </div>
@@ -51,9 +45,7 @@
       >
         <div class="col s12">
           <h3>Steps in conversion</h3>
-          <h3 v-for="(operation, index) in operationsArr" :key="index">
-            {{ operation }}
-          </h3>
+          <h3 v-for="(operation, index) in operationsArr" :key="index">{{ operation }}</h3>
           <h2>The final answer is {{ output }}</h2>
         </div>
       </div>
@@ -67,9 +59,7 @@
       >
         <div class="col s12">
           <h3>Steps in conversion</h3>
-          <h3 v-for="(operation, index) in operationsArr" :key="index">
-            {{ operation }}
-          </h3>
+          <h3 v-for="(operation, index) in operationsArr" :key="index">{{ operation }}</h3>
           <h2>The final answer is {{ output }}</h2>
         </div>
       </div>
@@ -90,7 +80,7 @@ export default {
   data() {
     return {
       userInput: '',
-      output: 'The result of your conversion will appear here!',
+      output: 'Converted result will appear here!',
       operationsArr: [],
       showOnesComplementOperations: false,
       showTwosComplementOperations: false
