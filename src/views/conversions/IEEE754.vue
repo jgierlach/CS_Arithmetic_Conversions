@@ -2,9 +2,10 @@
   <div>
     <transition name="slide" appear>
       <div class="container">
-        <div class="container center white-background padding move-down z-depth-4">
+        <!-- <div class="container center white-background padding move-down z-depth-4">
           <h3>Convert Floating Point Values to IEEE754 Format</h3>
-        </div>
+        </div>-->
+        <conversion-header :conversion_info="conversion_info"/>
         <div class="center white-background padding move-down z-depth-4">
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
@@ -64,15 +65,25 @@
 </template>
 
 <script>
+import ConversionHeader from '../../components/ConversionHeader'
 import {floatingPoint} from '../../utils/floating_point_to_iEEE754'
+
 export default {
   data() {
     return {
       userInput: '',
       output: 'Converted result will appear here!',
       showIEEEOperations: false,
-      iEEEOperationsArr: []
+      iEEEOperationsArr: [],
+      conversion_info: {
+        header: 'Convert Floating Point Values to IEEE754 Format',
+        learn: '',
+        practice: ''
+      }
     }
+  },
+  components: {
+    ConversionHeader
   },
   methods: {
     convertToIEEE754() {

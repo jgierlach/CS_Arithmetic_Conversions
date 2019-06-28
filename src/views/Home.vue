@@ -24,7 +24,7 @@
                 v-for="(option, index) in options"
                 :key="index"
                 :value="option"
-                :selected="option == 'Decimal To Binary'"
+                :selected="option"
               >{{ option }}</option>
             </select>
           </div>
@@ -41,13 +41,13 @@
         </div>
 
         <!-- This is where the user can immediately see the result of their conversion -->
-        <div class="container">
-          <div class="container move-down row center white-background z-depth-4">
-            <div class="col s12">
-              <h5>{{ output }}</h5>
-            </div>
+        <!-- <div class="container"> -->
+        <div class="container move-down row center white-background z-depth-4">
+          <div class="col s12">
+            <h5>{{ output }}</h5>
           </div>
         </div>
+        <!-- </div> -->
       </div>
     </div>
   </transition>

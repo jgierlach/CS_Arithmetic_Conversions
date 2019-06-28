@@ -21,7 +21,7 @@
           </router-link>
 
           <!-- Drop down menu for all the conversions available -->
-          <router-link to="" tag="li" class="black-text">
+          <router-link to="/" tag="li" class="black-text">
             <a class="dropdown-trigger black-text" data-target="dropdown1">
               Convert
               <i class="material-icons right">arrow_drop_down</i>
@@ -29,7 +29,7 @@
           </router-link>
 
           <!-- Drop down menu for all the explanations available -->
-          <router-link to="" tag="li" class="black-text">
+          <router-link to="/" tag="li" class="black-text">
             <a class="dropdown-trigger black-text" data-target="dropdown2">
               Learn
               <i class="material-icons right">arrow_drop_down</i>
@@ -37,7 +37,7 @@
           </router-link>
 
           <!-- Drop down menu for all the practice problems available -->
-          <router-link to="" tag="li" class="black-text">
+          <router-link to="/" tag="li" class="black-text">
             <a class="dropdown-trigger black-text" data-target="dropdown3">
               Practice Problems
               <i class="material-icons right">arrow_drop_down</i>

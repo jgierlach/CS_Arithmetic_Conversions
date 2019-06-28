@@ -5,14 +5,6 @@
         <h3>{{conversion_info.header}}</h3>
       </div>
     </div>
-    <div class="row">
-      <div class="col s6">
-        <button class="btn" @click="navigateToLearn">Learn</button>
-      </div>
-      <div class="col s6">
-        <button class="btn" @click="navigateToPractice">Practice</button>
-      </div>
-    </div>
   </div>
 </template>
 

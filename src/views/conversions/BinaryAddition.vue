@@ -3,9 +3,7 @@
     <transition name="slide" appear>
       <div class="container">
         <!-- Header saying what this componenet does -->
-        <div class="container center white-background padding move-down z-depth-4">
-          <h3>Add binary numbers together!</h3>
-        </div>
+        <conversion-header :conversion_info="conversion_info" />
         <!-- This will display two fields where the user can enter values and click the add button -->
         <div class="center white-background padding move-down z-depth-4">
           <!-- This row contains the input tag that we will get the userInput from -->
@@ -57,14 +55,13 @@
 </template>
 
 <script>
+import ConversionHeader from '../../components/ConversionHeader'
 import {
   isEqualLength,
   theLongerValue,
   theShorterValue,
   differenceInLength,
   appendZeros
-  // addInputs,
-  // binaryAddition
 } from '../../utils/binary_addition'
 export default {
   data() {
@@ -73,8 +70,16 @@ export default {
       value2: '',
       output: 'The sum will appear here!',
       binaryAdditionOperationsArr: [],
-      showAdditionOperations: false
+      showAdditionOperations: false,
+      conversion_info: {
+        header: 'Add Binary Numbers Together!',
+        learn: '',
+        practice: ''
+      }
     }
+  },
+  components: {
+    ConversionHeader
   },
   methods: {
     // addBinaryNumbers() {

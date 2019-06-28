@@ -1,36 +1,32 @@
 <template>
   <div class="container">
     <transition name="slide" appear>
-      <div class="container center white-background padding move-down z-depth-4">
-        <h3>Convert hexadecimal values!</h3>
-        <button class="btn" @click="decimalToHexPractice">Practice Problems</button>
-      </div>
-    </transition>
-
-    <transition name="slide" appear>
-      <div class="center white-background padding move-down z-depth-4">
-        <!-- This row contains the input tag that we will get the userInput from -->
-        <div class="row">
-          <div class="col s12 input-field">
-            <label for="valueToConvert">Value To Convert</label>
-            <input type="text" v-model="userInput">
+      <div>
+        <conversion-header :conversion_info="conversion_info"/>
+        <div class="center white-background padding move-down z-depth-4">
+          <!-- This row contains the input tag that we will get the userInput from -->
+          <div class="row">
+            <div class="col s12 input-field">
+              <label for="valueToConvert">Value To Convert</label>
+              <input type="text" v-model="userInput">
+            </div>
           </div>
-        </div>
-        <!-- This row contains the buttons for the initial conversions -->
-        <div class="row">
-          <!-- This column contains a button that will convert decimal to hex -->
-          <div class="col s12 m6">
-            <button class="btn" @click="convertDecimalToHex">Convert Decimal To Hex</button>
+          <!-- This row contains the buttons for the initial conversions -->
+          <div class="row">
+            <!-- This column contains a button that will convert decimal to hex -->
+            <div class="col s12 m6">
+              <button class="btn" @click="convertDecimalToHex">Convert Decimal To Hex</button>
+            </div>
+            <!-- This column contains a button that will convert hex to decimal -->
+            <div class="col s12 m6">
+              <button class="btn" @click="convertHexToDecimal">Convert Hex To Decimal</button>
+            </div>
           </div>
-          <!-- This column contains a button that will convert hex to decimal -->
-          <div class="col s12 m6">
-            <button class="btn" @click="convertHexToDecimal">Convert Hex To Decimal</button>
-          </div>
-        </div>
-        <!-- This is where the user can immediately see the result of their conversion -->
-        <div class="container move-down row center white-background z-depth-4">
-          <div class="col s12">
-            <h5>{{ output }}</h5>
+          <!-- This is where the user can immediately see the result of their conversion -->
+          <div class="container move-down row center white-background z-depth-4">
+            <div class="col s12">
+              <h5>{{ output }}</h5>
+            </div>
           </div>
         </div>
       </div>
@@ -72,6 +68,8 @@
 </template>
 
 <script>
+import ConversionHeader from '../../components/ConversionHeader'
+
 export default {
   data() {
     return {
@@ -96,8 +94,16 @@ export default {
         D: 13,
         E: 14,
         F: 15
+      },
+      conversion_info: {
+        header: 'Convert Hex to Decimal and Decimal to Hex',
+        learn: '',
+        practice: ''
       }
     }
+  },
+  components: {
+    ConversionHeader,
   },
   methods: {
     // navigate to page where we can practice the conversion

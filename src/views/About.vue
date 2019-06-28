@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col s12">
             <h3>
-              Hi, my name is Sven Magnus and I appreciate you checking out this
+              I appreciate you checking out this
               project. I built this site because I wanted to learn and create
               something using Vuejs. I thought a resource like this would be
               helpful to students in intro level Computer Science classes. If

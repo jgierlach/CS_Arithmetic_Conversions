@@ -3,9 +3,7 @@
     <div class="container">
       <transition name="slide" appear>
         <!-- Header for the ones and twos complement -->
-        <div class="container center white-background padding move-down z-depth-4">
-          <h3>Convert to Ones and Twos Complement</h3>
-        </div>
+        <conversion-header :conversion_info="conversion_info"/>
       </transition>
       <transition name="slide" appear>
         <div class="center white-background padding move-down z-depth-4">
@@ -68,6 +66,7 @@
 </template>
 
 <script>
+import ConversionHeader from '../../components/ConversionHeader'
 import {
   onesComplementConversion,
   isNegative,
@@ -83,8 +82,16 @@ export default {
       output: 'Converted result will appear here!',
       operationsArr: [],
       showOnesComplementOperations: false,
-      showTwosComplementOperations: false
+      showTwosComplementOperations: false,
+      conversion_info: {
+        header: 'Convert Ones and Twos Complement',
+        learn: '',
+        practice: ''
+      }
     }
+  },
+  components: {
+    ConversionHeader
   },
   methods: {
     convertToOnesComp() {

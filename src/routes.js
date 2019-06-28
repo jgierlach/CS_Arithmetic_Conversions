@@ -75,5 +75,5 @@ export const routes = [
   },
 
   // default redirect to home page for any route that is not identified
-  // {path: '*', redirect: '/'}
+  {path: '*', redirect: '/'}
 ]
