@@ -14,9 +14,9 @@
               <a
                 href="https://github.com/jgierlach/conversion_scripts"
                 target="_blank"
-                >here</a
-              >. If you have any questions or feedback feel free to
-              <a @click="contact">reach out</a> to me.
+              >here</a>. If you have any questions or feedback feel free to
+              <a @click="contact">reach out</a>
+              to me.
             </h3>
           </div>
         </div>
