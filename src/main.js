@@ -12,7 +12,7 @@ const router = new VueRouter({
   mode: 'history'
 })
 
-new Vue({
+const root = new Vue({
   router: router,
   render: h => h(App)
 }).$mount('#app')
