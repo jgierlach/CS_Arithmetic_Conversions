@@ -12,11 +12,11 @@ const router = new VueRouter({
   mode: 'history'
 })
 
-const root = new Vue({
+new Vue({
   router: router,
   render: h => h(App)
 }).$mount('#app')
 
-document.addEventListener('DOMContentLoaded', function() {
-  root.$mount('#app')
-})
+// document.addEventListener('DOMContentLoaded', function() {
+//   root.$mount('#app')
+// })
