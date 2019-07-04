@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <transition name="slide" appear>
-      <app-single-problem v-for="problem in problemList" :key="problem.id" :problem="problem"></app-single-problem>
-    </transition>
+    <app-single-problem v-for="problem in problemList" :key="problem.id" :problem="problem"></app-single-problem>
   </div>
 </template>
 
