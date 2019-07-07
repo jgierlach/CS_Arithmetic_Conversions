@@ -41,13 +41,11 @@
         </div>
 
         <!-- This is where the user can immediately see the result of their conversion -->
-        <!-- <div class="container"> -->
         <div class="container move-down row center white-background z-depth-4">
           <div class="col s12">
             <h5>{{ output }}</h5>
           </div>
         </div>
-        <!-- </div> -->
       </div>
     </div>
   </transition>
@@ -95,28 +93,34 @@ export default {
     convert() {
       switch (this.selectedConversion) {
         case 'Decimal to Binary':
-          this.output = `The binary value is ${decimalToBinary(this.userInput)}`
+          this.output = `The binary value of ${
+            this.userInput
+          } is ${decimalToBinary(this.userInput)}`
           break
         case 'Binary to Decimal':
-          this.output = `The decimal value is ${binaryToDecimal(
+          this.output = `The decimal value of ${
             this.userInput
-          )}`
+          } is ${binaryToDecimal(this.userInput)}`
           break
         case 'Decimal to Hexadecimal':
-          this.output = `The hexadecimal value is ${decimalToHexadecimal(
+          this.output = `The hexadecimal value of ${
             this.userInput
-          )}`
+          } is ${decimalToHexadecimal(this.userInput)}`
           break
         case 'Hexadecimal to Decimal':
-          this.output = `The decimal value is ${hexadecimalToDecimal(
+          this.output = `The decimal value of ${
             this.userInput
-          )}`
+          } is ${hexadecimalToDecimal(this.userInput)}`
           break
         case 'Decimal to Octal':
-          this.output = `The octal value is ${decimalToOctal(this.userInput)}`
+          this.output = `The octal value of ${
+            this.userInput
+          } is ${decimalToOctal(this.userInput)}`
           break
         case 'Octal to Decimal':
-          this.output = `The decimal value is ${octalToDecimal(this.userInput)}`
+          this.output = `The decimal value of ${
+            this.userInput
+          } is ${octalToDecimal(this.userInput)}`
           break
         default:
           return
