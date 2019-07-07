@@ -77,7 +77,7 @@
     <p class="flow-text center">1 1 1 0 1</p>
     <p class="flow-text center">+ _________________</p>
 
-    <p class="flow-text"><strong>Step 2.</strong> We add from right to left. The first sum is 1 + 1 and 1 + 1 = 10. This will result in 0 with a carry of 1.</p>
+    <p class="flow-text"><strong>Step 2.</strong> We add from right to left. The first sum is 1 + 1 = 10. This will result in 0 with a carry of 1.</p>
 
     
     <p class="flow-text center red-text"><pre>  1</pre></p>
@@ -88,7 +88,7 @@
 
     <p class="flow-text">Now in the next column we have 1 + 1 + 0 . We add the first two values and then that sum is added to the remaining value.  1 + 1 = 10 then 10 + 0 = 10. Therefore, we are going to write 0 and carry 1.</p>
 
-    <p class="flow-text center red-text"><pre> 11</pre></p>
+    <p class="flow-text center red-text"><pre>  11</pre></p>
     <p class="flow-text center">0 1 0 1 1</p>
     <p class="flow-text center">1 1 1 0 1</p>
     <p class="flow-text center">+ _________________</p>
@@ -96,11 +96,11 @@
 
     <p class="flow-text">Next, we must add 1 + 0 + 1. We add the first two numbers and get 1 + 0 = 1, then that sum is added to the remaining number, 1 + 1 = 10. So we write 0 and carry 1</p>
 
-    <p class="flow-text center red-text"><pre> 111</pre></p>
+    <p class="flow-text center red-text"><pre>111</pre></p>
     <p class="flow-text center">0 1 0 1 1</p>
     <p class="flow-text center">1 1 1 0 1</p>
     <p class="flow-text center">+ _________________</p>
-    <p class="flow-text center red-text"><pre>   000</pre></p>
+    <p class="flow-text center red-text"><pre>  000</pre></p>
 
     <p class="flow-text">Next, 1 + 1 + 1 we add the first two 1 + 1 = 10 then the results are added to the third 10 + 1 = 11. So we write 1 then we carry 1.</p>
 
@@ -108,7 +108,7 @@
     <p class="flow-text center">0 1 0 1 1</p>
     <p class="flow-text center">1 1 1 0 1</p>
     <p class="flow-text center">+ _________________</p>
-    <p class="flow-text center red-text"><pre>  1000</pre></p>
+    <p class="flow-text center red-text"><pre> 1000</pre></p>
 
     <p class="flow-text">For the final step, we must add 1 + 0 + 1. 1 + 0 = 1 and 1 + 1 = 10. We will directly write 10 because it is the last column.</p>
 
