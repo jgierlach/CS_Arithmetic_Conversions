@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "generate": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "aws s3 sync ./dist s3://cs-conversions-vuejs"
+    "deploy": "aws s3 sync ./dist s3://cs-conversions-vuejs",
+    "generate": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^2.6.9",
+    "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-meta": "^2.0.4",
     "vue-router": "^3.0.6"
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-pwa": "^3.9.0",
     "@vue/cli-service": "^3.8.4",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.2",

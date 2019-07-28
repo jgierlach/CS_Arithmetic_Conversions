@@ -59,8 +59,8 @@ import ConversionHeader from '../../components/ConversionHeader'
 import {
   isEqualLength,
   theLongerValue,
-  theShorterValue,
-  differenceInLength,
+  // theShorterValue,
+  // differenceInLength,
   appendZeros
 } from '../../utils/binary_addition'
 export default {

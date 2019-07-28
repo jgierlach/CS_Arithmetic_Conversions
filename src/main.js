@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import Meta from 'vue-meta'
 import {routes} from './routes.js'
+import './registerServiceWorker'
 
 Vue.use(VueRouter)
+Vue.use(Meta)
 
 Vue.config.productionTip = false
 

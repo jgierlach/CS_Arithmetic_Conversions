@@ -4,7 +4,7 @@
       <div class="center white-background padding move-down z-depth-4">
         <div class="row">
           <div class="col s12">
-            <h4 class="flow-text">
+            <h3>
               I appreciate you checking out this
               project. I built this site because I wanted to learn and create
               something using Vuejs. I thought a resource like this would be
@@ -17,7 +17,7 @@
               >here</a>. If you have any questions or feedback feel free to
               <a @click="contact">reach out</a>
               to me.
-            </h4>
+            </h3>
           </div>
         </div>
       </div>

@@ -58,7 +58,8 @@
     <p class="flow-text center">+ _________________</p>
     <p class="flow-text center red-text"><pre>     1</pre></p>
 
-    <p class="flow-text"><strong>Step 3.</strong> As we add the other values you will notice that they are all either 1 + 0 or 0 + 1. We know in binary that both of those sums are equal to 1.</p>
+    <p class="flow-text"><strong>Step 3.</strong> As we add the other values you will notice that they are all either 1 + 0 or 0 + 1. We know in binary that both of those sums are equal to 1.
+    </p>
 
     <p class="flow-text center">0 1 0 1 0</p>
     <p class="flow-text center">1 0 1 0 1</p>
@@ -126,7 +127,21 @@
 </template>
 
 <script>
+import Meta from 'vue-meta'
+
 export default {
+  metaInfo() {
+    return {
+      title: 'Learn Binary Addition',
+      titleTemplate: '%s ← My Site',
+    meta: [
+      {
+        name: "description",
+        content: "poot"
+      }
+    ]
+    }
+  },
   methods: {
     navigateToBinaryAddition() {
       this.$router.push('/binary-addition-conversion')
