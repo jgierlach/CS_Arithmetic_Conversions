@@ -60,7 +60,7 @@ body {
   opacity: 0;
 }
 
-/* .slide-enter-active {
+.slide-enter-active {
   animation: slide-in 1s ease-out forwards;
 }
 
@@ -84,5 +84,5 @@ body {
   to {
     transform: translateY(20px);
   }
-} */
+}
 </style>
