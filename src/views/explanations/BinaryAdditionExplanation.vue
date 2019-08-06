@@ -3,7 +3,7 @@
     <h3 class="center">Binary Addition</h3>
 
     <p class="flow-text">
-      <strong>Binary Addition</strong> requires knowledge of how the binary number system works. Understanding the following arithmetic is all that is required to perform binary addition.
+      <strong>Binary Addition</strong> requires knowledge of how the binary number system works. If you are familliar with that, understanding the following arithmetic is all that is required to perform binary addition.
     </p>
 
     <ul class="collection with-header z-depth-2">
