@@ -30,7 +30,7 @@
           </div>
           <div class="input-field col s6">
             <label for="valueToConvert">Value To Convert</label>
-            <input id="valueToConvert" type="text" name="userInput" v-model="userInput">
+            <input id="valueToConvert" type="text" name="userInput" v-model="userInput" />
           </div>
         </div>
 
@@ -60,6 +60,12 @@ import {decimalToOctal} from '../utils/decimal_to_octal'
 import {octalToDecimal} from '../utils/octal_to_decimal'
 
 export default {
+  metaInfo() {
+    return {
+      title: 'CS Conversions!',
+      meta: []
+    }
+  },
   mounted() {
     window.addEventListener('load', () => {
       var elems = document.querySelectorAll('select')

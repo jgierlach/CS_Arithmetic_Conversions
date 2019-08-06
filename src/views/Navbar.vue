@@ -1,12 +1,20 @@
 ƒ<template>
   <div>
     <div class="navbar-fixed">
-      <nav class="white-background z-depth-3 navbar-fixed">
+      <nav :class="{ dark: darkMode }" class="white-background z-depth-3 navbar-fixed">
         <div class="nav-wrapper">
           <!-- Hamburger icon for mobile nav -->
           <a href="#" data-target="slide-out" class="sidenav-trigger black-text">
             <i class="material-icons black-text">menu</i>
           </a>
+
+          <!-- Dark Mode Toggle -->
+          <div class="switch sidenav-trigger">
+            <label>
+              <input @click="darkMode=!darkMode" type="checkbox" />
+              <span class="lever"></span>
+            </label>
+          </div>
 
           <!-- Beginning of desktop nav -->
           <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -304,3 +312,21 @@
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      darkMode: false
+    }
+  }
+}
+</script>
+
+<style>
+.dark {
+  background-color: black;
+  color: white;
+}
+</style>
+

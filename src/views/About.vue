@@ -27,6 +27,12 @@
 
 <script>
 export default {
+  metaInfo() {
+    return {
+      title: 'CS Conversions!',
+      meta: []
+    }
+  },
   methods: {
     contact() {
       this.$router.push('/contact')
