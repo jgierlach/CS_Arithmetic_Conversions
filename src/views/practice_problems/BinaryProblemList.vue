@@ -11,6 +11,19 @@
 <script>
 import SingleProblem from '../../components/SingleProblem.vue'
 export default {
+  metaInfo() {
+    return {
+      title: 'Practice Converting Between Binary And Decimal!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Practice your ability to convert between binary and decimal.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       problemList: [

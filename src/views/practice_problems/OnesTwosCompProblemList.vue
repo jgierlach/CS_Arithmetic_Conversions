@@ -11,6 +11,19 @@
 <script>
 import SingleProblem from '../../components/SingleProblem.vue'
 export default {
+  metaInfo() {
+    return {
+      title: 'Practice Converting Negative Number To Ones And Twos Complement!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Practice your ability to convert negative numbers to ones and twos complement.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       problemList: [

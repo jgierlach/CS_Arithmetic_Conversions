@@ -133,11 +133,11 @@ export default {
   metaInfo() {
     return {
       title: 'Learn Binary Addition',
-      titleTemplate: '%s ← My Site',
+      titleTemplate: '%s ← Cs Conversions',
     meta: [
       {
         name: "description",
-        content: "poot"
+        content: "Easily learn binary addition!"
       }
     ]
     }

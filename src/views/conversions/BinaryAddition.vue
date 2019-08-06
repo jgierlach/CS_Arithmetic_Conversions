@@ -11,12 +11,12 @@
             <div class="col s12 m6 input-field">
               <!-- Input field for the first number they want to add -->
               <label for="valueToAdd">First Value</label>
-              <input type="text" v-model="value1">
+              <input type="text" v-model="value1" />
             </div>
             <div class="col s12 m6 input-field">
               <!-- Input field for the second number they want to add -->
               <label for="valueToAdd">Second Value</label>
-              <input type="text" v-model="value2">
+              <input type="text" v-model="value2" />
             </div>
           </div>
           <!-- This row contains the buttons for the IEEE 754 conversion -->
@@ -64,6 +64,18 @@ import {
   appendZeros
 } from '../../utils/binary_addition'
 export default {
+  metaInfo() {
+    return {
+      title: 'Add Binary Numbers Together!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content: 'This tool allows you to add binary numbers together and shows you every step in the process!'
+        }
+      ]
+    }
+  },
   data() {
     return {
       value1: '',

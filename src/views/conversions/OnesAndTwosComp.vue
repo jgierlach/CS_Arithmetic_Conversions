@@ -3,7 +3,7 @@
     <div class="container">
       <transition name="slide" appear>
         <!-- Header for the ones and twos complement -->
-        <conversion-header :conversion_info="conversion_info"/>
+        <conversion-header :conversion_info="conversion_info" />
       </transition>
       <transition name="slide" appear>
         <div class="center white-background padding move-down z-depth-4">
@@ -11,7 +11,7 @@
           <div class="row">
             <div class="col s12 input-field">
               <label for="valueToConvert">Value To Convert</label>
-              <input type="text" v-model="userInput">
+              <input type="text" v-model="userInput" />
             </div>
           </div>
           <!-- This row contains the buttons for the initial conversions -->
@@ -76,6 +76,19 @@ import {
 import {binaryAddition} from '../../utils/binary_addition'
 
 export default {
+  metaInfo() {
+    return {
+      title: 'Convert Negative Numbers To Ones And Twos Complement!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'This tool allows you to convert negative numbers to ones and twos complement. It shows you every step in the process, so you follow along and understand how these conversions happen.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       userInput: '',

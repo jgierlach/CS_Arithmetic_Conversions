@@ -11,6 +11,19 @@
 <script>
 import SingleProblem from '../../components/SingleProblem.vue'
 export default {
+  metaInfo() {
+    return {
+      title: 'Practice Converting Floating Point To IEEE754!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Practice your ability to convert floaing point to IEEE54 format.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       problemList: [

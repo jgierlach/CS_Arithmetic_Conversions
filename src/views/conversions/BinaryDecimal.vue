@@ -83,6 +83,18 @@
 import ConversionHeader from '../../components/ConversionHeader'
 
 export default {
+  metaInfo() {
+    return {
+      title: 'Convert Binary To Decimal And Decimal To Binary!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content: 'This tool allows you to convert base 2 binary values to decimal base 10, and base 10 decimal to base 2 binary. It shows you every step in the process, so you follow along and understand how these conversions happen.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       userInput: '',

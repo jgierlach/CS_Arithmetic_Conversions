@@ -2,13 +2,13 @@
   <div class="container">
     <transition name="slide" appear>
       <div>
-        <conversion-header :conversion_info="conversion_info"/>
+        <conversion-header :conversion_info="conversion_info" />
         <div class="center white-background padding move-down z-depth-4">
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
               <label for="valueToConvert">Value To Convert</label>
-              <input type="text" v-model="userInput">
+              <input type="text" v-model="userInput" />
             </div>
           </div>
           <!-- This row contains the buttons for the initial conversions -->
@@ -71,6 +71,19 @@
 import ConversionHeader from '../../components/ConversionHeader'
 
 export default {
+  metaInfo() {
+    return {
+      title: 'Convert Hexadecimal To Decimal And Decimal To Hexadecimal!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'This tool allows you to convert base 16 hexadecimal values to base 10 decimal, and base 10 decimal to base 16 hexadecimal. It shows you every step in the process, so you follow along and understand how these conversions happen.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       userInput: '',
@@ -103,7 +116,7 @@ export default {
     }
   },
   components: {
-    ConversionHeader,
+    ConversionHeader
   },
   methods: {
     // navigate to page where we can practice the conversion

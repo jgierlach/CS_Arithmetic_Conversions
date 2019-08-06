@@ -7,6 +7,19 @@
 <script>
 import SingleProblem from '../../components/SingleProblem.vue'
 export default {
+  metaInfo() {
+    return {
+      title: 'Practice Adding Binary Numbers Together!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Practice your ability to perform binary addition.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       problemList: [

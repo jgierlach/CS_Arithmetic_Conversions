@@ -5,13 +5,13 @@
         <!-- <div class="container center white-background padding move-down z-depth-4">
           <h3>Convert Floating Point Values to IEEE754 Format</h3>
         </div>-->
-        <conversion-header :conversion_info="conversion_info"/>
+        <conversion-header :conversion_info="conversion_info" />
         <div class="center white-background padding move-down z-depth-4">
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
               <label for="valueToConvert">Value To Convert</label>
-              <input type="text" v-model="userInput">
+              <input type="text" v-model="userInput" />
             </div>
           </div>
           <!-- This row contains the buttons for the IEEE 754 conversion -->
@@ -69,6 +69,19 @@ import ConversionHeader from '../../components/ConversionHeader'
 import {floatingPoint} from '../../utils/floating_point_to_iEEE754'
 
 export default {
+  metaInfo() {
+    return {
+      title: 'Convert Floating Point Decimal To IEEE754 Format!',
+      titleTemplate: '%s ← Cs Conversions',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'This tool allows you to floating point decimal values to IEEE754 format. It shows you every step in the process, so you follow along and understand how these conversions happen.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       userInput: '',
