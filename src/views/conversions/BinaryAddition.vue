@@ -43,11 +43,11 @@
         v-if="showAdditionOperations"
       >
         <div class="col s12">
-          <h3>Steps In Conversion</h3>
+          <h2>Steps In Conversion</h2>
           <!-- Here is where we are displaying all the steps involved in the conversion -->
           <h3 :key="index" v-for="(operation, index) in binaryAdditionOperationsArr">{{ operation }}</h3>
           <!-- Here we display the final answer -->
-          <h1>Final Answer = {{ output }}</h1>
+          <h2>Final Answer = {{ output }}</h2>
         </div>
       </div>
     </transition>
@@ -113,7 +113,7 @@ export default {
 
         this.binaryAdditionOperationsArr.push(`${num1}`)
         this.binaryAdditionOperationsArr.push(`${num2}`)
-        this.binaryAdditionOperationsArr.push(`+ -----------------`)
+        this.binaryAdditionOperationsArr.push(`+ ____________`)
 
         // addition happens from right to left
         num1 = [...num1].reverse()
