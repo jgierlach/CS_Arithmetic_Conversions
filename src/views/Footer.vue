@@ -1,10 +1,8 @@
 <template>
-  <div></div>
-  <!-- <footer id="footer" class="page-footer white-background z-depth-4">
-    <div class="container">
+  <!-- <footer id="footer" class="page-footer keep-footer-down white-background z-depth-4"> -->
+  <!-- <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-        </div>
+        <div class="col l6 s12"></div>
         <div class="col l4 offset-l2 s12"></div>
       </div>
     </div>
@@ -13,8 +11,8 @@
         © 2014 Copyright Text
         <a class="black-text text-lighten-4 right" href="#!">More Links</a>
       </div>
-    </div>
-  </footer> -->
+  </div>-->
+  <!-- </footer> -->
 </template>
 
 <style scoped>

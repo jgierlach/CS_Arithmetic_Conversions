@@ -3,12 +3,15 @@
     <transition name="slide" appear>
       <div>
         <conversion-header :conversion_info="conversion_info" />
-        <div class="center white-background padding move-down z-depth-4">
+        <div
+          :class="[darkMode ? darkTextBackground : whiteBackground]"
+          class="center padding move-down z-depth-4"
+        >
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
-              <label for="valueToConvert">Value To Convert</label>
-              <input type="text" v-model="userInput" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToConvert">Value To Convert</label>
+              <input :class="[darkMode ? whiteText : '']" type="text" v-model="userInput" />
             </div>
           </div>
           <!-- This row contains the buttons for the initial conversions -->
@@ -23,9 +26,12 @@
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
-          <div class="container move-down row center white-background z-depth-4">
+          <div
+            :class="[darkMode ? whiteText : '']"
+            class="container move-down row center z-depth-4"
+          >
             <div class="col s12">
-              <h5>{{ output }}</h5>
+              <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
             </div>
           </div>
         </div>
@@ -36,14 +42,19 @@
     <transition name="fade">
       <div
         v-if="showDecimalToHexConversionOperations"
-        class="row center white-background move-down padding z-depth-4"
+        :class="[darkMode ? darkTextBackground : whiteBackground]"
+        class="row center move-down padding z-depth-4"
       >
         <div class="col s12">
-          <h3>Steps In Conversion</h3>
+          <h2 :class="[darkMode ? whiteText : '']">Steps In Conversion</h2>
           <!-- Here is where we are displaying all the steps involved in the conversion -->
-          <h3 :key="index" v-for="(operation, index) in decimalToHexConversionArr">{{ operation }}</h3>
+          <h3
+            :class="[darkMode ? whiteText : '']"
+            :key="index"
+            v-for="(operation, index) in decimalToHexConversionArr"
+          >{{ operation }}</h3>
           <!-- Here we display the final answer -->
-          <h1>Final answer = {{ output }}</h1>
+          <h2 :class="[darkMode ? whiteText : '']">Final answer = {{ output }}</h2>
         </div>
       </div>
     </transition>
@@ -52,15 +63,20 @@
     <transition name="fade">
       <div
         v-if="showHexToDecimalConversionOperations"
-        class="row center white-background move-down padding z-depth-4"
+        :class="[darkMode ? darkTextBackground : whiteBackground]"
+        class="row center move-down padding z-depth-4"
       >
         <div class="col s12">
-          <h3>Steps In Conversion</h3>
+          <h2 :class="[darkMode ? whiteText : '']">Steps In Conversion</h2>
 
           <!-- Here is where we are displaying all the steps involved in the conversion -->
-          <h3 :key="index" v-for="(operation, index) in hexToDecimalConversionArr">{{ operation }}</h3>
+          <h3
+            :class="[darkMode ? whiteText : '']"
+            :key="index"
+            v-for="(operation, index) in hexToDecimalConversionArr"
+          >{{ operation }}</h3>
           <!-- At the end of the conversion steps the final answer is displayed -->
-          <h1>Final answer = {{ output }}</h1>
+          <h2 :class="[darkMode ? whiteText : '']">Final answer = {{ output }}</h2>
         </div>
       </div>
     </transition>
@@ -86,6 +102,9 @@ export default {
   },
   data() {
     return {
+      darkTextBackground: 'dark-text-background',
+      whiteBackground: 'white-background',
+      whiteText: 'white-text',
       userInput: '',
       output: 'Converted result will appear here!',
       showDecimalToHexConversionOperations: false,
@@ -113,6 +132,11 @@ export default {
         learn: '',
         practice: ''
       }
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
     }
   },
   components: {

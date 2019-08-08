@@ -1,17 +1,17 @@
 ƒ<template>
   <div>
     <div class="navbar-fixed">
-      <nav :class="{ dark: darkMode }" class="white-background z-depth-3 navbar-fixed">
+      <nav :class="[darkMode ? dark : light]" class="z-depth-3 navbar-fixed">
         <div class="nav-wrapper">
           <!-- Hamburger icon for mobile nav -->
-          <a href="#" data-target="slide-out" class="sidenav-trigger black-text">
-            <i class="material-icons black-text">menu</i>
+          <a href="#" data-target="slide-out" class="sidenav-trigger">
+            <i :class="darkMode ? whiteText : blackText" class="material-icons black-text">menu</i>
           </a>
 
           <!-- Dark Mode Toggle -->
           <div class="switch sidenav-trigger">
             <label>
-              <input @click="darkMode=!darkMode" type="checkbox" />
+              <input @click="toggleDarkMode" type="checkbox" />
               <span class="lever"></span>
             </label>
           </div>
@@ -19,40 +19,52 @@
           <!-- Beginning of desktop nav -->
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <!-- Link to home component -->
-            <router-link to="/" tag="li" class="black-text" activeClass="active" exact>
-              <a class="black-text">Home</a>
+            <router-link to="/" tag="li" activeClass="active" exact>
+              <a :class="darkMode ? whiteText : blackText">Home</a>
             </router-link>
 
             <!-- Drop down menu for all the conversions available -->
-            <router-link to="/" tag="li" class="black-text">
-              <a class="dropdown-trigger black-text" data-target="dropdown1">
+            <router-link to="/" tag="li">
+              <a
+                :class="darkMode ? whiteText : blackText"
+                class="dropdown-trigger"
+                data-target="dropdown1"
+              >
                 Convert
                 <i class="material-icons right">arrow_drop_down</i>
               </a>
             </router-link>
 
             <!-- Drop down menu for all the explanations available -->
-            <router-link to="/" tag="li" class="black-text">
-              <a class="dropdown-trigger black-text" data-target="dropdown2">
+            <router-link to="/" tag="li">
+              <a
+                :class="darkMode ? whiteText : blackText"
+                class="dropdown-trigger"
+                data-target="dropdown2"
+              >
                 Learn
                 <i class="material-icons right">arrow_drop_down</i>
               </a>
             </router-link>
 
             <!-- Drop down menu for all the practice problems available -->
-            <router-link to="/" tag="li" class="black-text">
-              <a class="dropdown-trigger black-text" data-target="dropdown3">
+            <router-link to="/" tag="li">
+              <a
+                :class="darkMode ? whiteText : blackText"
+                class="dropdown-trigger"
+                data-target="dropdown3"
+              >
                 Practice Problems
                 <i class="material-icons right">arrow_drop_down</i>
               </a>
             </router-link>
 
             <router-link to="/about" tag="li" activeClass="active">
-              <a class="black-text">About</a>
+              <a :class="darkMode ? whiteText : blackText">About</a>
             </router-link>
 
-            <router-link to="/contact" tag="li" class="black-text" activeClass="active">
-              <a class="black-text">Contact</a>
+            <router-link to="/contact" tag="li" activeClass="active">
+              <a :class="darkMode ? whiteText : blackText">Contact</a>
             </router-link>
           </ul>
 
@@ -317,16 +329,25 @@
 export default {
   data() {
     return {
-      darkMode: false
+      dark: 'dark-nav',
+      light: 'white-background',
+      whiteText: 'white-text',
+      blackText: 'black-text'
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      return this.$store.commit('changeMode')
     }
   }
 }
 </script>
 
-<style>
-.dark {
-  background-color: black;
-  color: white;
-}
+<style scoped>
 </style>
 

@@ -1,9 +1,12 @@
 <template>
-  <div class="padding white-background move-down z-depth-4 center">
+  <div
+    :class="[darkMode ? darkTextBackground : whiteBackground]"
+    class="padding move-down z-depth-4 center"
+  >
     <!-- Code block to display the type of conversion -->
     <div class="row">
       <div class="col s12">
-        <h2>{{ listItem.conversionType }}</h2>
+        <h2 :class="[darkMode ? whiteText : '']">{{ listItem.conversionType }}</h2>
       </div>
     </div>
     <!-- Code block for button to navigate to conversion -->
@@ -17,9 +20,7 @@
       </div>
       <!-- Code block for button to navigate to practice problems -->
       <div class="col s12 m4">
-        <button class="btn-large" @click="goToPracticeProblems">
-          Practice
-        </button>
+        <button class="btn-large" @click="goToPracticeProblems">Practice</button>
       </div>
     </div>
   </div>
@@ -28,6 +29,18 @@
 <script>
 export default {
   props: ['listItem'],
+  data() {
+    return {
+      darkTextBackground: 'dark-text-background',
+      whiteBackground: 'white-background',
+      whiteText: 'white-text'
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
+    }
+  },
   methods: {
     // gets the url for **conversion** from props
     goToConversion() {

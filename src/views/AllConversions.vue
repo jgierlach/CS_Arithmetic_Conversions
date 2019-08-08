@@ -4,10 +4,13 @@
       <div>
         <div class="container">
           <div
-            class="container padding white-background move-down z-depth-4 center"
+            :class="[darkMode ? darkTextBackground : whiteBackground]"
+            class="container padding move-down z-depth-4 center"
           >
             <!-- Tag line -->
-            <h2>Your computer science conversions with explanations!</h2>
+            <h2
+              :class="[darkMode ? whiteText : '']"
+            >Your computer science conversions with explanations!</h2>
           </div>
         </div>
         <!-- Home page list of topics -->
@@ -20,6 +23,18 @@
 <script>
 import HomePageList from '../components/HomePageList.vue'
 export default {
+  data() {
+    return {
+      darkTextBackground: 'dark-text-background',
+      whiteBackground: 'white-background',
+      whiteText: 'white-text'
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
+    }
+  },
   components: {
     appHomePageList: HomePageList
   }

@@ -1,10 +1,13 @@
 <template>
   <div class="container">
     <transition name="slide" appear>
-      <div class="center white-background padding move-down z-depth-4">
+      <div
+        :class="[darkMode ? darkTextBackground : whiteBackground]"
+        class="center padding move-down z-depth-4"
+      >
         <div class="row">
           <div class="col s12">
-            <h3>
+            <h3 :class="[darkMode ? whiteText : '']">
               I appreciate you checking out this
               project. I built this site because I wanted to learn and create
               something using Vuejs. I thought a resource like this would be
@@ -36,6 +39,18 @@ export default {
   methods: {
     contact() {
       this.$router.push('/contact')
+    }
+  },
+  data() {
+    return {
+      darkTextBackground: 'dark-text-background',
+      whiteBackground: 'white-background',
+      whiteText: 'white-text'
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
     }
   }
 }

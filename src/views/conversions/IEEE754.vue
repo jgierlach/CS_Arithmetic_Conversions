@@ -6,12 +6,15 @@
           <h3>Convert Floating Point Values to IEEE754 Format</h3>
         </div>-->
         <conversion-header :conversion_info="conversion_info" />
-        <div class="center white-background padding move-down z-depth-4">
+        <div
+          :class="[darkMode ? darkTextBackground : whiteBackground]"
+          class="center padding move-down z-depth-4"
+        >
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
-              <label for="valueToConvert">Value To Convert</label>
-              <input type="text" v-model="userInput" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToConvert">Value To Convert</label>
+              <input :class="[darkMode ? whiteText : '']" type="text" v-model="userInput" />
             </div>
           </div>
           <!-- This row contains the buttons for the IEEE 754 conversion -->
@@ -25,9 +28,12 @@
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
-          <div class="container move-down row center white-background z-depth-4">
+          <div
+            :class="[darkMode ? darkTextBackground : whiteBackground]"
+            class="container move-down row center z-depth-4"
+          >
             <div class="col s12">
-              <h5>{{ output }}</h5>
+              <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
             </div>
           </div>
         </div>
@@ -37,7 +43,8 @@
     <transition name="fade" appear>
       <div
         v-if="showIEEEOperations"
-        class="container center white-background padding move-down z-depth-4"
+        :class="[darkMode ? darkTextBackground : whiteBackground]"
+        class="container center padding move-down z-depth-4"
       >
         <h3 v-for="(operation, index) in iEEEOperationsArr" :key="index">{{ operation }}</h3>
 
@@ -58,7 +65,10 @@
             </tr>
           </tbody>
         </table>
-        <h4 :style="{background: 'yellow'}">Final answer = {{ output }}</h4>
+        <h4
+          :class="[darkMode ? whiteText : '']"
+          :style="{background: 'yellow'}"
+        >Final answer = {{ output }}</h4>
       </div>
     </transition>
   </div>
@@ -84,6 +94,9 @@ export default {
   },
   data() {
     return {
+      darkTextBackground: 'dark-text-background',
+      whiteBackground: 'white-background',
+      whiteText: 'white-text',
       userInput: '',
       output: 'Converted result will appear here!',
       showIEEEOperations: false,
@@ -93,6 +106,11 @@ export default {
         learn: '',
         practice: ''
       }
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
     }
   },
   components: {

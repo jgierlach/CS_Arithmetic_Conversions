@@ -2,10 +2,15 @@
   <transition name="slide" appear>
     <div class="container">
       <!-- The header explaining what conversions are possible -->
-      <div class="container center white-background padding move-down z-depth-4">
+      <div
+        :class="[darkMode ? darkTextBackground : whiteBackground]"
+        class="container center padding move-down z-depth-4"
+      >
         <div class="row">
           <div class="col s12">
-            <h3>Convert between Decimal, Binary, Hexadecimal, and Octal!</h3>
+            <h3
+              :class="[darkMode ? whiteText : '']"
+            >Convert between Decimal, Binary, Hexadecimal, and Octal!</h3>
           </div>
         </div>
         <!-- Call to action button directing the user to the page with the full list of conversions -->
@@ -16,11 +21,15 @@
         </div>
       </div>
 
-      <div class="center white-background padding move-down z-depth-4">
+      <div
+        :class="[darkMode ? darkTextBackground : whiteBackground]"
+        class="center padding move-down z-depth-4"
+      >
         <div class="row">
-          <div class="col s6 input-field">
-            <select v-model="selectedConversion">
+          <div :class="[darkMode ? whiteText : '']" class="col s6 input-field">
+            <select :class="[darkMode ? whiteText : '']" v-model="selectedConversion">
               <option
+                :class="[darkMode ? whiteText : '']"
                 v-for="(option, index) in options"
                 :key="index"
                 :value="option"
@@ -29,8 +38,14 @@
             </select>
           </div>
           <div class="input-field col s6">
-            <label for="valueToConvert">Value To Convert</label>
-            <input id="valueToConvert" type="text" name="userInput" v-model="userInput" />
+            <label :class="[darkMode ? whiteText : '']" for="valueToConvert">Value To Convert</label>
+            <input
+              :class="[darkMode ? whiteText : '']"
+              id="valueToConvert"
+              type="text"
+              name="userInput"
+              v-model="userInput"
+            />
           </div>
         </div>
 
@@ -41,9 +56,12 @@
         </div>
 
         <!-- This is where the user can immediately see the result of their conversion -->
-        <div class="container move-down row center white-background z-depth-4">
+        <div
+          :class="[darkMode ? darkTextBackground : whiteBackground]"
+          class="container move-down move-bottom row center z-depth-4"
+        >
           <div class="col s12">
-            <h5>{{ output }}</h5>
+            <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
           </div>
         </div>
       </div>
@@ -89,7 +107,10 @@ export default {
         'Decimal to Octal',
         'Octal to Decimal'
       ],
-      selectedConversion: 'Decimal To Binary'
+      selectedConversion: 'Decimal To Binary',
+      darkTextBackground: 'dark-text-background',
+      whiteBackground: 'white-background',
+      whiteText: 'white-text'
     }
   },
   methods: {
@@ -131,6 +152,11 @@ export default {
         default:
           return
       }
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
     }
   }
 }

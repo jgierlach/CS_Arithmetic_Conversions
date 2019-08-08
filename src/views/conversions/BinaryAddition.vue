@@ -5,18 +5,21 @@
         <!-- Header saying what this componenet does -->
         <conversion-header :conversion_info="conversion_info" />
         <!-- This will display two fields where the user can enter values and click the add button -->
-        <div class="center white-background padding move-down z-depth-4">
+        <div
+          :class="[darkMode ? darkTextBackground : whiteBackground]"
+          class="center padding move-down z-depth-4"
+        >
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 m6 input-field">
               <!-- Input field for the first number they want to add -->
-              <label for="valueToAdd">First Value</label>
-              <input type="text" v-model="value1" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToAdd">First Value</label>
+              <input :class="[darkMode ? whiteText : '']" type="text" v-model="value1" />
             </div>
             <div class="col s12 m6 input-field">
               <!-- Input field for the second number they want to add -->
-              <label for="valueToAdd">Second Value</label>
-              <input type="text" v-model="value2" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToAdd">Second Value</label>
+              <input :class="[darkMode ? whiteText : '']" type="text" v-model="value2" />
             </div>
           </div>
           <!-- This row contains the buttons for the IEEE 754 conversion -->
@@ -27,9 +30,12 @@
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
-          <div class="container move-down row center white-background z-depth-4">
+          <div
+            :class="[darkMode ? darkTextBackground : whiteBackground]"
+            class="container move-down row center z-depth-4"
+          >
             <div class="col s12">
-              <h5>{{ output }}</h5>
+              <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
             </div>
           </div>
         </div>
@@ -39,15 +45,20 @@
     <transition name="fade" appear>
       <!-- conditionally render some code if they hit the add button -->
       <div
-        class="container row center white-background move-down padding z-depth-4"
+        :class="[darkMode ? darkTextBackground : whiteBackground]"
+        class="container row center move-down padding z-depth-4"
         v-if="showAdditionOperations"
       >
         <div class="col s12">
-          <h2>Steps In Conversion</h2>
+          <h2 :class="[darkMode ? whiteText : '']">Steps In Conversion</h2>
           <!-- Here is where we are displaying all the steps involved in the conversion -->
-          <h3 :key="index" v-for="(operation, index) in binaryAdditionOperationsArr">{{ operation }}</h3>
+          <h3
+            :class="[darkMode ? whiteText : '']"
+            :key="index"
+            v-for="(operation, index) in binaryAdditionOperationsArr"
+          >{{ operation }}</h3>
           <!-- Here we display the final answer -->
-          <h2>Final Answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">Final Answer = {{ output }}</h2>
         </div>
       </div>
     </transition>
@@ -71,13 +82,17 @@ export default {
       meta: [
         {
           name: 'description',
-          content: 'This tool allows you to add binary numbers together and shows you every step in the process!'
+          content:
+            'This tool allows you to add binary numbers together and shows you every step in the process!'
         }
       ]
     }
   },
   data() {
     return {
+      darkTextBackground: 'dark-text-background',
+      whiteBackground: 'white-background',
+      whiteText: 'white-text',
       value1: '',
       value2: '',
       output: 'The sum will appear here!',
@@ -88,6 +103,11 @@ export default {
         learn: '',
         practice: ''
       }
+    }
+  },
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode
     }
   },
   components: {
