@@ -56,14 +56,22 @@
         </div>
 
         <!-- This is where the user can immediately see the result of their conversion -->
-        <div
-          :class="[darkMode ? darkTextBackground : whiteBackground]"
-          class="container move-down move-bottom row center z-depth-4"
-        >
-          <div class="col s12">
-            <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
+        <transition name="fade">
+          <div
+            v-if="showAnswer"
+            :class="[darkMode ? darkTextBackground : whiteBackground]"
+            class="container move-answer-down row center z-depth-4"
+          >
+            <div class="col s12">
+              <h5 :class="[darkMode ? whiteText : '']">
+                {{inputFromUser}}
+                <sub>({{userInputBase}})</sub>
+                = {{output}}
+                <sub>({{outputBase}})</sub>
+              </h5>
+            </div>
           </div>
-        </div>
+        </transition>
       </div>
     </div>
   </transition>
@@ -97,8 +105,12 @@ export default {
   },
   data() {
     return {
+      showAnswer: false,
+      userInputBase: 0,
+      outputBase: 0,
       userInput: '',
-      output: 'The result will appear here!',
+      inputFromUser: '',
+      output: '',
       options: [
         'Decimal to Binary',
         'Binary to Decimal',
@@ -120,34 +132,46 @@ export default {
     convert() {
       switch (this.selectedConversion) {
         case 'Decimal to Binary':
-          this.output = `The binary value of ${
-            this.userInput
-          } is ${decimalToBinary(this.userInput)}`
+          this.showAnswer = true
+          this.inputFromUser = this.userInput
+          this.userInputBase = 10
+          this.outputBase = 2
+          this.output = decimalToBinary(this.userInput)
           break
         case 'Binary to Decimal':
-          this.output = `The decimal value of ${
-            this.userInput
-          } is ${binaryToDecimal(this.userInput)}`
+          this.showAnswer = true
+          this.inputFromUser = this.userInput
+          this.userInputBase = 2
+          this.outputBase = 10
+          this.output = binaryToDecimal(this.userInput)
           break
         case 'Decimal to Hexadecimal':
-          this.output = `The hexadecimal value of ${
-            this.userInput
-          } is ${decimalToHexadecimal(this.userInput)}`
+          this.showAnswer = true
+          this.inputFromUser = this.userInput
+          this.userInputBase = 10
+          this.outputBase = 16
+          this.output = decimalToHexadecimal(this.userInput)
           break
         case 'Hexadecimal to Decimal':
-          this.output = `The decimal value of ${
-            this.userInput
-          } is ${hexadecimalToDecimal(this.userInput)}`
+          this.showAnswer = true
+          this.inputFromUser = this.userInput
+          this.userInputBase = 16
+          this.outputBase = 10
+          this.output = hexadecimalToDecimal(this.userInput)
           break
         case 'Decimal to Octal':
-          this.output = `The octal value of ${
-            this.userInput
-          } is ${decimalToOctal(this.userInput)}`
+          this.showAnswer = true
+          this.inputFromUser = this.userInput
+          this.userInputBase = 10
+          this.outputBase = 8
+          this.output = decimalToOctal(this.userInput)
           break
         case 'Octal to Decimal':
-          this.output = `The decimal value of ${
-            this.userInput
-          } is ${octalToDecimal(this.userInput)}`
+          this.showAnswer = true
+          this.inputFromUser = this.userInput
+          this.userInputBase = 8
+          this.outputBase = 10
+          this.output = octalToDecimal(this.userInput)
           break
         default:
           return
@@ -161,3 +185,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.move-answer-down {
+  margin-top: 3em;
+}
+</style>

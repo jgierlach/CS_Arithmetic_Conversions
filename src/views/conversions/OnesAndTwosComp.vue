@@ -21,11 +21,17 @@
           <div class="row">
             <!-- This column contains a button that will convert negative decimal values to ones complement binary -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertToOnesComp">Convert To Ones Complement</button>
+              <button
+                class="btn button-margin"
+                @click="convertToOnesComp"
+              >Convert To Ones Complement</button>
             </div>
             <!-- This column contains a button that will convert negative decimal values to twos complement binary -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertToTwosComp">Convert To Twos Complement</button>
+              <button
+                class="btn button-margin"
+                @click="convertToTwosComp"
+              >Convert To Twos Complement</button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->

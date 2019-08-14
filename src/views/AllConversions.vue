@@ -45,8 +45,4 @@ export default {
 .padding {
   padding: 1.5em;
 }
-
-.move-down {
-  margin-top: 3em;
-}
 </style>

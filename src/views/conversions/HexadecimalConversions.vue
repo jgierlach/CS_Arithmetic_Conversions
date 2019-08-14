@@ -18,11 +18,11 @@
           <div class="row">
             <!-- This column contains a button that will convert decimal to hex -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertDecimalToHex">Convert Decimal To Hex</button>
+              <button class="btn button-margin" @click="convertDecimalToHex">Convert Decimal To Hex</button>
             </div>
             <!-- This column contains a button that will convert hex to decimal -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertHexToDecimal">Convert Hex To Decimal</button>
+              <button class="btn button-margin" @click="convertHexToDecimal">Convert Hex To Decimal</button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
