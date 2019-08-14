@@ -20,11 +20,17 @@
           <div class="row">
             <!-- This column contains a button that will convert binary to decimal -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertBinaryToDecimal">Convert Binary To Decimal</button>
+              <button
+                class="btn button-margin"
+                @click="convertBinaryToDecimal"
+              >Convert Binary To Decimal</button>
             </div>
             <!-- This column contains a button that will convert decimal to binary -->
             <div class="col s12 m6">
-              <button class="btn" @click="convertDecimalToBinary">Convert Decimal To Binary</button>
+              <button
+                class="btn button-margin"
+                @click="convertDecimalToBinary"
+              >Convert Decimal To Binary</button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->

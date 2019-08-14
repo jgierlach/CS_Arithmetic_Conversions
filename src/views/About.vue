@@ -32,7 +32,7 @@
 export default {
   metaInfo() {
     return {
-      title: 'CS Conversions!',
+      title: 'Sven Magnus',
       meta: []
     }
   },

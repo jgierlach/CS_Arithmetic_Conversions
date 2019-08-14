@@ -89,7 +89,13 @@ export default {
   metaInfo() {
     return {
       title: 'CS Conversions!',
-      meta: []
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Easily convert between decimal, binary, octal, and hexadecimal.'
+        }
+      ]
     }
   },
   mounted() {
