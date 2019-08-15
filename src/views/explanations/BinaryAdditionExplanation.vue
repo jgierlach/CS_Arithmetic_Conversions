@@ -164,11 +164,4 @@ export default {
 
 
 <style scoped>
-.red-text {
-  color: red;
-}
-
-.answer-font {
-  font-size: 2rem;
-}
 </style>

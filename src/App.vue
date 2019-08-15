@@ -89,6 +89,14 @@ export default {
   color: black;
 }
 
+.red-text {
+  color: red;
+}
+
+.answer-font {
+  font-size: 2rem;
+}
+
 .fade-enter {
   opacity: 0;
 }
