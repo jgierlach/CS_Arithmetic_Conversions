@@ -131,9 +131,14 @@
               <a class="black-text">IEEE 754</a>
             </router-link>
             <li class="divider"></li>
-            <!-- Link to Ones and Twos complement Explanation -->
+            <!-- Link to Ones complement Explanation -->
             <router-link to="/ones-complement-explanation" tag="li" class="black-text" exact>
-              <a class="black-text">Ones And Twos Complement</a>
+              <a class="black-text">Ones Complement</a>
+            </router-link>
+            <li class="divider"></li>
+            <!-- Link to Twos complement Explanation -->
+            <router-link to="/twos-complement-explanation" tag="li" class="black-text" exact>
+              <a class="black-text">Twos Complement</a>
             </router-link>
             <li class="divider"></li>
             <!-- Link to binary addition Explanation -->
@@ -278,9 +283,14 @@
           <a class="black-text">IEEE 754</a>
         </router-link>
         <li class="divider"></li>
-        <!-- Link to Ones and Twos complement Explanation -->
+        <!-- Link to Ones complement Explanation -->
         <router-link to="/ones-complement-explanation" tag="li" class="black-text" exact>
-          <a class="black-text">Ones And Twos Complement</a>
+          <a class="black-text">Ones Complement</a>
+        </router-link>
+        <li class="divider"></li>
+        <!-- Link to Twos complement Explanation -->
+        <router-link to="/twos-complement-explanation" tag="li" class="black-text" exact>
+          <a class="black-text">Twos Complement</a>
         </router-link>
         <li class="divider"></li>
         <!-- Link to binary addition Explanation -->

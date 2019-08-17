@@ -34,14 +34,22 @@
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
-          <div
-            :class="[darkMode ? darkTextBackground : whiteBackground]"
-            class="container move-down row center z-depth-4"
-          >
-            <div class="col s12">
-              <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
+          <transition name="fade">
+            <div
+              v-if="showAnswer"
+              :class="[darkMode ? darkTextBackground : whiteBackground]"
+              class="container move-down row center z-depth-4"
+            >
+              <div class="col s12">
+                <h5 :class="[darkMode ? whiteText : '']">
+                  {{userInputSaved}}
+                  <sub>({{userInputBase}})</sub>
+                  = {{ output }}
+                  <sub>({{outputBase}})</sub>
+                </h5>
+              </div>
             </div>
-          </div>
+          </transition>
         </div>
       </div>
     </transition>
@@ -66,7 +74,7 @@
             v-for="(operation, index) in binaryToDecimalConversionArr"
           >{{ operation }}</h3>
           <!-- Here we display the final answer -->
-          <h2>Final answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">Final answer = {{ output }}</h2>
         </div>
       </div>
     </transition>
@@ -118,9 +126,13 @@ export default {
       whiteBackground: 'white-background',
       whiteText: 'white-text',
       userInput: '',
+      userInputSaved: '',
+      userInputBase: 0,
       output: 'Converted result will appear here!',
+      outputBase: 0,
       showDecimalToBinaryConversionOperations: false,
       showBinaryToDecimalConversionOperations: false,
+      showAnswer: false,
       binaryToDecimalConversionArr: [],
       decimalToBinaryConversionArr: [],
       conversion_info: {
@@ -140,6 +152,13 @@ export default {
   },
   methods: {
     convertBinaryToDecimal() {
+      // save the user input to be referenced in the answer
+      this.userInputSaved = this.userInput
+      // Assign bases
+      this.userInputBase = 2
+      this.outputBase = 10
+      // Show the answer
+      this.showAnswer = true
       // We need to reset our binaryToDecimal Conversion arr from it's previous values
       this.binaryToDecimalConversionArr = []
       // We will add values to this number
@@ -162,6 +181,13 @@ export default {
       this.output = finalValue
     },
     convertDecimalToBinary() {
+      // save the user input to be referenced in the answer
+      this.userInputSaved = this.userInput
+      // Assign bases
+      this.userInputBase = 10
+      this.outputBase = 2
+      // Show the answer
+      this.showAnswer = true
       // We need to reset our binaryToDecimal Conversion arr from it's previous values
       this.decimalToBinaryConversionArr = []
       // convert the user input to an int

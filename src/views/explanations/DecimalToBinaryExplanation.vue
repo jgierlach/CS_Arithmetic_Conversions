@@ -12,7 +12,7 @@
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       The
-      <strong>binary</strong> number system instead of using a base of 10 uses a base of two. Which means it can only represent a place value as either 0 or 1.
+      <strong>binary</strong> number system instead of using a base of ten uses a base of two. Which means it can only represent a place value as either 0 or 1.
     </p>
 
     <p
@@ -33,7 +33,7 @@
     <ul class="collection with-header z-depth-3 container">
       <li class="collection-header center">
         <h5 class="flow-text">
-          <strong>172 divided by 2 until 0</strong>
+          <strong>Steps In Conversion</strong>
         </h5>
       </li>
       <li class="collection-item">
