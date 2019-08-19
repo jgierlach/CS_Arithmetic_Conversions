@@ -143,7 +143,7 @@
     <p
       :class="[darkMode ? whiteText : '']"
       class="flow-text"
-    >If we read the remainder column from the bottom up we will get the following converted result.</p>
+    ><strong>If we read the remainder column from the bottom up we will get the following converted result.</p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text center">
       <span class="red-text">13</span> -
