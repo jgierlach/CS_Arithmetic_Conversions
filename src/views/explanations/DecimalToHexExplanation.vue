@@ -140,10 +140,9 @@
       </li>
     </ul>
 
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    ><strong>If we read the remainder column from the bottom up we will get the following converted result.</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      <strong>Step 2.</strong> Read the remainder column from the bottom up to get the converted result.
+    </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text center">
       <span class="red-text">13</span> -
@@ -153,14 +152,18 @@
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
-      But we're not done yet. With the exception of
-      <strong>9</strong> all the other remainder values are between 10 and 15.
+      <strong>Step 3.</strong> But we're not done yet. With the exception of
+      <strong>9</strong> all the other remainder values are between
+      <strong>10</strong> and
+      <strong>15</strong>. For all values greater than 9 look up the correct letter representation.
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       Let's look at our
       <strong>hex table</strong> to see how those values should be represented.
     </p>
+
+    <br />
 
     <ul class="collection with-header z-depth-3 container">
       <li class="collection-item">
@@ -182,6 +185,8 @@
         <p class="flow-text">F = 15</p>
       </li>
     </ul>
+
+    <br />
 
     <p
       :class="[darkMode ? whiteText : '']"
