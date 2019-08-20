@@ -31,6 +31,11 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
 #app {
   min-height: 100vh;
   height: 100%;

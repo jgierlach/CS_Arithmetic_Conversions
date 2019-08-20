@@ -36,11 +36,15 @@
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
           <div
+            v-if="showOutput"
             :class="[darkMode ? darkTextBackground : whiteBackground]"
             class="container move-down row center z-depth-4"
           >
             <div class="col s12">
-              <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
+              <h5 :class="[darkMode ? whiteText : '']">
+                {{savedInput}} = {{output}}
+                <sub>{{currentComplement}}</sub>
+              </h5>
             </div>
           </div>
         </div>
@@ -116,8 +120,11 @@ export default {
       darkTextBackground: 'dark-text-background',
       whiteBackground: 'white-background',
       whiteText: 'white-text',
+      currentComplement: '',
       userInput: '',
-      output: 'Converted result will appear here!',
+      savedInput: '',
+      output: '',
+      showOutput: false,
       operationsArr: [],
       showOnesComplementOperations: false,
       showTwosComplementOperations: false,
@@ -138,9 +145,13 @@ export default {
   },
   methods: {
     convertToOnesComp() {
+      this.currentComplement = 'ones complement'
+      // Save input for display in answer
+      this.savedInput = this.userInput
+      // Set show output to true
+      this.showOutput = true
       // Reset the operations arr to get rid of previous operations
       this.operationsArr = []
-
       // Check that the users input is negative
       if (isNegative(this.userInput)) {
         // remove the negative sign from the user input
@@ -192,9 +203,13 @@ export default {
       this.showOnesComplementOperations = true
     },
     convertToTwosComp() {
+      this.currentComplement = 'twos complement'
+      // Save input for display in answer
+      this.savedInput = this.userInput
+      // Set show output to true
+      this.showOutput = true
       // Reset the operations arr to get rid of previous operations
       this.operationsArr = []
-
       // Check that the users input is negative
       if (isNegative(this.userInput)) {
         // remove the negative sign from the user input

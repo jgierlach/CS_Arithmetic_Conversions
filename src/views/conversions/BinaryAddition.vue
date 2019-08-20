@@ -31,11 +31,12 @@
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
           <div
+            v-if="showSum"
             :class="[darkMode ? darkTextBackground : whiteBackground]"
             class="container move-down row center z-depth-4"
           >
             <div class="col s12">
-              <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
+              <h5 :class="[darkMode ? whiteText : '']">The sum = {{ output }}</h5>
             </div>
           </div>
         </div>
@@ -95,6 +96,7 @@ export default {
       whiteText: 'white-text',
       value1: '',
       value2: '',
+      showSum: false,
       output: 'The sum will appear here!',
       binaryAdditionOperationsArr: [],
       showAdditionOperations: false,
@@ -118,6 +120,8 @@ export default {
     //   this.output = binaryAddition(this.value1, this.value2)
     // }
     addBinaryNumbers() {
+      // set show sum to true
+      this.showSum = true
       // reset the the binaryAddditionOperationsArr to get rid of old operations stored in there
       this.binaryAdditionOperationsArr = []
       // add inputs function

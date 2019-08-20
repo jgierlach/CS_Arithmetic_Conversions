@@ -27,11 +27,17 @@
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
           <div
+            v-if="showAnswer"
             :class="[darkMode ? whiteText : '']"
             class="container move-down row center z-depth-4"
           >
             <div class="col s12">
-              <h5 :class="[darkMode ? whiteText : '']">{{ output }}</h5>
+              <h5 :class="[darkMode ? whiteText : '']">
+                {{userInputSaved}}
+                <sub>({{userInputBase}})</sub>
+                = {{ output }}
+                <sub>({{outputBase}})</sub>
+              </h5>
             </div>
           </div>
         </div>
@@ -54,7 +60,12 @@
             v-for="(operation, index) in decimalToHexConversionArr"
           >{{ operation }}</h3>
           <!-- Here we display the final answer -->
-          <h2 :class="[darkMode ? whiteText : '']">Final answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">
+            {{userInputSaved}}
+            <sub>({{userInputBase}})</sub>
+            = {{ output }}
+            <sub>({{outputBase}})</sub>
+          </h2>
         </div>
       </div>
     </transition>
@@ -76,7 +87,12 @@
             v-for="(operation, index) in hexToDecimalConversionArr"
           >{{ operation }}</h3>
           <!-- At the end of the conversion steps the final answer is displayed -->
-          <h2 :class="[darkMode ? whiteText : '']">Final answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">
+            {{userInputSaved}}
+            <sub>({{userInputBase}})</sub>
+            = {{ output }}
+            <sub>({{outputBase}})</sub>
+          </h2>
         </div>
       </div>
     </transition>
@@ -106,7 +122,11 @@ export default {
       whiteBackground: 'white-background',
       whiteText: 'white-text',
       userInput: '',
-      output: 'Converted result will appear here!',
+      userInputSaved: '',
+      userInputBase: 0,
+      output: '',
+      outputBase: 0,
+      showAnswer: false,
       showDecimalToHexConversionOperations: false,
       showHexToDecimalConversionOperations: false,
       hexToDecimalConversionArr: [],
@@ -143,11 +163,14 @@ export default {
     ConversionHeader
   },
   methods: {
-    // navigate to page where we can practice the conversion
-    decimalToHexPractice() {
-      this.$router.push('/hexadecimal-practice-problems')
-    },
     convertDecimalToHex() {
+      // save user input
+      this.userInputSaved = this.userInput
+      // set the bases for the answer
+      this.userInputBase = 10
+      this.outputBase = 16
+      // show the output
+      this.showAnswer = true
       // clear the operations arr of previous values
       this.decimalToHexConversionArr = []
       // convert the user input to an int
@@ -162,7 +185,7 @@ export default {
             `16 goes into ${int}, ${Math.floor(
               int / 16
             )} times with a remainder of ${int %
-              16}, because the remainder is greater than 9 we have to look at the letter value that represents values 9 through 16 in hex code. In this case that value would be ${value}`
+              16}, because the remainder is greater than 9 we have to look at the letter values that represent values 10 through 15 in hex code. In this case that value would be ${value}`
           )
           conversionResults.unshift(value)
         } else {
@@ -182,6 +205,13 @@ export default {
       this.output = conversionResults.join('')
     },
     convertHexToDecimal() {
+      // save user input
+      this.userInputSaved = this.userInput
+      // set the bases
+      this.userInputBase = 16
+      this.outputBase = 10
+      // show the output
+      this.showAnswer = true
       // clear the operations arr of previous values
       this.hexToDecimalConversionArr = []
       // We will add values to this number

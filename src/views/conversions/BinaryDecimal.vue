@@ -74,7 +74,12 @@
             v-for="(operation, index) in binaryToDecimalConversionArr"
           >{{ operation }}</h3>
           <!-- Here we display the final answer -->
-          <h2 :class="[darkMode ? whiteText : '']">Final answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">
+            {{userInputSaved}}
+            <sub>({{userInputBase}})</sub>
+            = {{ output }}
+            <sub>({{outputBase}})</sub>
+          </h2>
         </div>
       </div>
     </transition>
@@ -96,7 +101,12 @@
             v-for="(operation, index) in decimalToBinaryConversionArr"
           >{{ operation }}</h3>
           <!-- At the end of the conversion steps the final answer is displayed -->
-          <h2 :class="[darkMode ? whiteText : '']">Final answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">
+            {{userInputSaved}}
+            <sub>({{userInputBase}})</sub>
+            = {{ output }}
+            <sub>({{outputBase}})</sub>
+          </h2>
         </div>
       </div>
     </transition>
