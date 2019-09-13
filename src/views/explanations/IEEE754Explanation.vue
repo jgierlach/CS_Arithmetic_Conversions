@@ -13,11 +13,11 @@ export default {
       meta: [
         {
           name: 'description',
-          content: 'Easily learn how to convert floating point decimal to IEEE754 format!'
+          content:
+            'Easily learn how to convert floating point decimal to IEEE754 format!'
         }
       ]
     }
   }
 }
 </script>
-

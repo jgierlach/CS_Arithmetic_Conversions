@@ -3,40 +3,40 @@
     :class="[darkMode ? darkTextBackground : whiteBackground]"
     class="container padding move-down z-depth-4"
   >
-    <h3 :class="[darkMode ? whiteText : '']" class="center">How to Convert Decimal to Hex?</h3>
+    <h3 :class="[darkMode ? whiteText : '']" class="center">
+      How to Convert Decimal to Hex?
+    </h3>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       The
-      <strong>decimal number system</strong> is the one we have all been using since grammar school. As you well know it uses a
-      <strong>base of ten</strong> to represent values, and that base consists of
-      <strong>0, 1, 2, 3, 4, 5, 6, 7, 8,</strong> and
-      <strong>9</strong>.
+      <strong>decimal number system</strong> is the one we have all been using
+      since grammar school. As you well know it uses a
+      <strong>base of ten</strong> to represent values, and that base consists
+      of <strong>0, 1, 2, 3, 4, 5, 6, 7, 8,</strong> and <strong>9</strong>.
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       The
       <strong>hexadecimal number system</strong>, also referred to
-      <strong>shorthand</strong> as just
-      <strong>Hex</strong>, uses a
-      <strong>base 16</strong> number system. If you were like me when you first encountered
-      <strong>hexadecimal</strong> values you might have been confused by what all the
-      <strong>letters</strong> meant.
+      <strong>shorthand</strong> as just <strong>Hex</strong>, uses a
+      <strong>base 16</strong> number system. If you were like me when you first
+      encountered <strong>hexadecimal</strong> values you might have been
+      confused by what all the <strong>letters</strong> meant.
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       In the base 10
-      <strong>decimal system</strong> we have
-      <strong>0 through 9</strong> to represent numbers. In base 16
-      <strong>hexadecimal</strong> we have
-      <strong>0 through 9</strong> as well, but we also need some way to convey the values
-      <strong>10 through 15</strong>.
+      <strong>decimal system</strong> we have <strong>0 through 9</strong> to
+      represent numbers. In base 16 <strong>hexadecimal</strong> we have
+      <strong>0 through 9</strong> as well, but we also need some way to convey
+      the values <strong>10 through 15</strong>.
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       This is where the letters
       <strong>A through F</strong> come in. Their purpose is to
-      <strong>represent</strong> the values
-      <strong>10 through 15</strong>. Seeing it all written out is the best way to understand it.
+      <strong>represent</strong> the values <strong>10 through 15</strong>.
+      Seeing it all written out is the best way to understand it.
     </p>
 
     <ul class="collection with-header z-depth-3 container">
@@ -90,18 +90,18 @@
       </li>
     </ul>
 
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    >Alright! Now that we understand what hex is and how it works, let's convert a decimal value to hex.</p>
-
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    >We'll use the decimal value of 56,489 as an example.</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      Alright! Now that we understand what hex is and how it works, let's
+      convert a decimal value to hex.
+    </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
-      <strong>Step 1.</strong> We are going to divide 56,489 by 16 until it is 0 and keep track of the remainders as we go.
+      We'll use the decimal value of 56,489 as an example.
+    </p>
+
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      <strong>Step 1.</strong> We are going to divide 56,489 by 16 until it is 0
+      and keep track of the remainders as we go.
     </p>
 
     <ul class="collection with-header z-depth-3 container">
@@ -141,12 +141,12 @@
     </ul>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
-      <strong>Step 2.</strong> Read the remainder column from the bottom up to get the converted result.
+      <strong>Step 2.</strong> Read the remainder column from the bottom up to
+      get the converted result.
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text center">
-      <span class="red-text">13</span> -
-      <span class="red-text">12</span> -
+      <span class="red-text">13</span> - <span class="red-text">12</span> -
       <span class="red-text">10</span> -
       <span class="red-text">9</span>
     </p>
@@ -154,8 +154,8 @@
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       <strong>Step 3.</strong> But we're not done yet. With the exception of
       <strong>9</strong> all the other remainder values are between
-      <strong>10</strong> and
-      <strong>15</strong>. For all values greater than 9 look up the correct letter representation.
+      <strong>10</strong> and <strong>15</strong>. For all values greater than 9
+      look up the correct letter representation.
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
@@ -188,10 +188,9 @@
 
     <br />
 
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    >So in our converted result of 13 - 12 - 10 - 9</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      So in our converted result of 13 - 12 - 10 - 9
+    </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text center">
       13 becomes
@@ -250,4 +249,3 @@ export default {
   }
 }
 </script>
-

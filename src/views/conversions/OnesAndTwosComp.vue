@@ -13,25 +13,29 @@
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
-              <label :class="[darkMode ? whiteText : '']" for="valueToConvert">Value To Convert</label>
-              <input :class="[darkMode ? whiteText : '']" type="text" v-model="userInput" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToConvert"
+                >Value To Convert</label
+              >
+              <input
+                :class="[darkMode ? whiteText : '']"
+                type="text"
+                v-model="userInput"
+              />
             </div>
           </div>
           <!-- This row contains the buttons for the initial conversions -->
           <div class="row">
             <!-- This column contains a button that will convert negative decimal values to ones complement binary -->
             <div class="col s12 m6">
-              <button
-                class="btn button-margin"
-                @click="convertToOnesComp"
-              >Convert To Ones Complement</button>
+              <button class="btn button-margin" @click="convertToOnesComp">
+                Convert To Ones Complement
+              </button>
             </div>
             <!-- This column contains a button that will convert negative decimal values to twos complement binary -->
             <div class="col s12 m6">
-              <button
-                class="btn button-margin"
-                @click="convertToTwosComp"
-              >Convert To Twos Complement</button>
+              <button class="btn button-margin" @click="convertToTwosComp">
+                Convert To Twos Complement
+              </button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
@@ -42,8 +46,8 @@
           >
             <div class="col s12">
               <h5 :class="[darkMode ? whiteText : '']">
-                {{savedInput}} = {{output}}
-                <sub>{{currentComplement}}</sub>
+                {{ savedInput }} = {{ output }}
+                <sub>{{ currentComplement }}</sub>
               </h5>
             </div>
           </div>
@@ -64,8 +68,12 @@
             :class="[darkMode ? whiteText : '']"
             v-for="(operation, index) in operationsArr"
             :key="index"
-          >{{ operation }}</h3>
-          <h2 :class="[darkMode ? whiteText : '']">The final answer is {{ output }}</h2>
+          >
+            {{ operation }}
+          </h3>
+          <h2 :class="[darkMode ? whiteText : '']">
+            The final answer is {{ output }}
+          </h2>
         </div>
       </div>
     </transition>
@@ -83,8 +91,12 @@
             :class="[darkMode ? whiteText : '']"
             v-for="(operation, index) in operationsArr"
             :key="index"
-          >{{ operation }}</h3>
-          <h2 :class="[darkMode ? whiteText : '']">The final answer is {{ output }}</h2>
+          >
+            {{ operation }}
+          </h3>
+          <h2 :class="[darkMode ? whiteText : '']">
+            The final answer is {{ output }}
+          </h2>
         </div>
       </div>
     </transition>

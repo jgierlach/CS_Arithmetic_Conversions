@@ -8,15 +8,17 @@
       >
         <div class="row">
           <div class="col s12">
-            <h3
-              :class="[darkMode ? whiteText : '']"
-            >Convert between Decimal, Binary, Hexadecimal, and Octal!</h3>
+            <h3 :class="[darkMode ? whiteText : '']">
+              Convert between Decimal, Binary, Hexadecimal, and Octal!
+            </h3>
           </div>
         </div>
         <!-- Call to action button directing the user to the page with the full list of conversions -->
         <div class="row">
           <div class="col s12">
-            <button class="btn-large" @click="navigateToAllConversion">See full list of conversions!</button>
+            <button class="btn-large" @click="navigateToAllConversion">
+              See full list of conversions!
+            </button>
           </div>
         </div>
       </div>
@@ -27,18 +29,24 @@
       >
         <div class="row">
           <div :class="[darkMode ? whiteText : '']" class="col s6 input-field">
-            <select :class="[darkMode ? whiteText : '']" v-model="selectedConversion">
+            <select
+              :class="[darkMode ? whiteText : '']"
+              v-model="selectedConversion"
+            >
               <option
                 :class="[darkMode ? whiteText : '']"
                 v-for="(option, index) in options"
                 :key="index"
                 :value="option"
                 :selected="option"
-              >{{ option }}</option>
+                >{{ option }}</option
+              >
             </select>
           </div>
           <div class="input-field col s6">
-            <label :class="[darkMode ? whiteText : '']" for="valueToConvert">Value To Convert</label>
+            <label :class="[darkMode ? whiteText : '']" for="valueToConvert"
+              >Value To Convert</label
+            >
             <input
               :class="[darkMode ? whiteText : '']"
               id="valueToConvert"
@@ -64,10 +72,10 @@
           >
             <div class="col s12">
               <h5 :class="[darkMode ? whiteText : '']">
-                {{inputFromUser}}
-                <sub>({{userInputBase}})</sub>
-                = {{output}}
-                <sub>({{outputBase}})</sub>
+                {{ inputFromUser }}
+                <sub>({{ userInputBase }})</sub>
+                = {{ output }}
+                <sub>({{ outputBase }})</sub>
               </h5>
             </div>
           </div>

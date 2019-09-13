@@ -3,32 +3,37 @@
     :class="[darkMode ? darkTextBackground : whiteBackground]"
     class="container padding move-down z-depth-4"
   >
-    <h3 :class="[darkMode ? whiteText : '']" class="center">How To Convert Decimal To Binary?</h3>
+    <h3 :class="[darkMode ? whiteText : '']" class="center">
+      How To Convert Decimal To Binary?
+    </h3>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       The
-      <strong>decimal</strong> number system is the one we have all been using since grammar school. As you well know it uses a base of ten to represent values, and that base consists of 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+      <strong>decimal</strong> number system is the one we have all been using
+      since grammar school. As you well know it uses a base of ten to represent
+      values, and that base consists of 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.
     </p>
 
     <p :class="[darkMode ? whiteText : '']" class="flow-text">
       The
-      <strong>binary</strong> number system instead of using a base of ten uses a base of two. Which means it can only represent a place value as either 0 or 1.
+      <strong>binary</strong> number system instead of using a base of ten uses
+      a base of two. Which means it can only represent a place value as either 0
+      or 1.
     </p>
 
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    >Okay so let's jump right in to the best way to convert a value that is in decimal base 10 to binary base 2.</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      Okay so let's jump right in to the best way to convert a value that is in
+      decimal base 10 to binary base 2.
+    </p>
 
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    >We'll use the decimal value of 172 as an example.</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      We'll use the decimal value of 172 as an example.
+    </p>
 
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    >We're going to divide 172 by 2 until it is 0 keeping track of the remainder as we go.</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      We're going to divide 172 by 2 until it is 0 keeping track of the
+      remainder as we go.
+    </p>
 
     <ul class="collection with-header z-depth-3 container">
       <li class="collection-header center">
@@ -101,12 +106,14 @@
       </li>
     </ul>
 
-    <p
-      :class="[darkMode ? whiteText : '']"
-      class="flow-text"
-    >Now all that is left to get the converted binary value is to read this remainder column from the bottom up.</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      Now all that is left to get the converted binary value is to read this
+      remainder column from the bottom up.
+    </p>
 
-    <p :class="[darkMode ? whiteText : '']" class="flow-text">Put it all together and.....</p>
+    <p :class="[darkMode ? whiteText : '']" class="flow-text">
+      Put it all together and.....
+    </p>
 
     <p :class="[darkMode ? whiteText : '']" class="center answer-font">
       172

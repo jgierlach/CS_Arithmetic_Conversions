@@ -8,9 +8,9 @@
             class="container padding move-down z-depth-4 center"
           >
             <!-- Tag line -->
-            <h2
-              :class="[darkMode ? whiteText : '']"
-            >Your computer science conversions with explanations!</h2>
+            <h2 :class="[darkMode ? whiteText : '']">
+              Your computer science conversions with explanations!
+            </h2>
           </div>
         </div>
         <!-- Home page list of topics -->

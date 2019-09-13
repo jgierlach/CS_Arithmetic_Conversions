@@ -13,18 +13,23 @@
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
-              <label :class="[darkMode ? whiteText : '']" for="valueToConvert">Value To Convert</label>
-              <input :class="[darkMode ? whiteText : '']" type="text" v-model="userInput" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToConvert"
+                >Value To Convert</label
+              >
+              <input
+                :class="[darkMode ? whiteText : '']"
+                type="text"
+                v-model="userInput"
+              />
             </div>
           </div>
           <!-- This row contains the buttons for the IEEE 754 conversion -->
           <div class="row">
             <!-- This column contains a button that will convert floating point to IEEE 754 format -->
             <div class="col s12 m12">
-              <button
-                class="btn"
-                @click="convertToIEEE754"
-              >Convert Floating Point to IEEE 754 format</button>
+              <button class="btn" @click="convertToIEEE754">
+                Convert Floating Point to IEEE 754 format
+              </button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
@@ -46,7 +51,9 @@
         :class="[darkMode ? darkTextBackground : whiteBackground]"
         class="container center padding move-down z-depth-4"
       >
-        <h3 v-for="(operation, index) in iEEEOperationsArr" :key="index">{{ operation }}</h3>
+        <h3 v-for="(operation, index) in iEEEOperationsArr" :key="index">
+          {{ operation }}
+        </h3>
 
         <table class="centered responsive-table striped">
           <thead>
@@ -68,7 +75,9 @@
         <h4
           :class="[darkMode ? whiteText : '']"
           :style="{background: 'yellow'}"
-        >Final answer = {{ output }}</h4>
+        >
+          Final answer = {{ output }}
+        </h4>
       </div>
     </transition>
   </div>

@@ -5,7 +5,9 @@
   >
     <div class="row">
       <div class="col s12">
-        <h3 :class="[darkMode ? whiteText : '']">{{conversion_info.header}}</h3>
+        <h3 :class="[darkMode ? whiteText : '']">
+          {{ conversion_info.header }}
+        </h3>
       </div>
     </div>
   </div>
@@ -36,4 +38,3 @@ export default {
   }
 }
 </script>
-

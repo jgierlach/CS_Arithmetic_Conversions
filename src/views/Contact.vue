@@ -12,22 +12,41 @@
           :class="[darkMode ? darkTextBackground : whiteBackground]"
           class="center padding move-down z-depth-4"
         >
-          <form action="https://formspree.io/jegierlach@gmail.com" method="POST">
+          <form
+            action="https://formspree.io/jegierlach@gmail.com"
+            method="POST"
+          >
             <!-- This row contains the name fields on the same line -->
             <div class="row">
               <div class="input-field col s6">
-                <label :class="[darkMode ? whiteText : '']" for="firstName">first name</label>
-                <input :class="[darkMode ? whiteText : '']" id="firstName" type="text" name="name" />
+                <label :class="[darkMode ? whiteText : '']" for="firstName"
+                  >first name</label
+                >
+                <input
+                  :class="[darkMode ? whiteText : '']"
+                  id="firstName"
+                  type="text"
+                  name="name"
+                />
               </div>
               <div class="input-field col s6">
-                <label :class="[darkMode ? whiteText : '']" for="lastName">last name</label>
-                <input :class="[darkMode ? whiteText : '']" id="lastName" type="text" name="name" />
+                <label :class="[darkMode ? whiteText : '']" for="lastName"
+                  >last name</label
+                >
+                <input
+                  :class="[darkMode ? whiteText : '']"
+                  id="lastName"
+                  type="text"
+                  name="name"
+                />
               </div>
             </div>
             <!-- This row contains the email field -->
             <div class="row">
               <div class="input-field col s12">
-                <label :class="[darkMode ? whiteText : '']" for="email">email</label>
+                <label :class="[darkMode ? whiteText : '']" for="email"
+                  >email</label
+                >
                 <input
                   :class="[darkMode ? whiteText : '']"
                   id="email"
@@ -40,7 +59,9 @@
             <!-- This row contains the message textarea -->
             <div class="row">
               <div class="input-field col s12">
-                <label :class="[darkMode ? whiteText : '']" for="textarea">message</label>
+                <label :class="[darkMode ? whiteText : '']" for="textarea"
+                  >message</label
+                >
                 <textarea
                   :class="[darkMode ? whiteText : '']"
                   id="textarea"
@@ -51,7 +72,11 @@
               </div>
             </div>
             <!-- This is the submit button -->
-            <button class="btn waves-effect waves-light" type="submit" value="Send">
+            <button
+              class="btn waves-effect waves-light"
+              type="submit"
+              value="Send"
+            >
               Send
               <i class="material-icons right">send</i>
             </button>
@@ -78,7 +103,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 .padding {

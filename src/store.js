@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    darkMode: false,
+    darkMode: false
   },
   mutations: {
     changeMode(state) {
       state.darkMode = !state.darkMode
     }
-  },
+  }
 })

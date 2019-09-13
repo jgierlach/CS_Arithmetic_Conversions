@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <appHomePageListItem v-for="item in PageItems" :listItem="item" :key="item.id"></appHomePageListItem>
+    <appHomePageListItem
+      v-for="item in PageItems"
+      :listItem="item"
+      :key="item.id"
+    ></appHomePageListItem>
   </div>
 </template>
 

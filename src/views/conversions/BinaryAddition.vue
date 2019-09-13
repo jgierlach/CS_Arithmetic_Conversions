@@ -13,20 +13,34 @@
           <div class="row">
             <div class="col s12 m6 input-field">
               <!-- Input field for the first number they want to add -->
-              <label :class="[darkMode ? whiteText : '']" for="valueToAdd">First Value</label>
-              <input :class="[darkMode ? whiteText : '']" type="text" v-model="value1" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToAdd"
+                >First Value</label
+              >
+              <input
+                :class="[darkMode ? whiteText : '']"
+                type="text"
+                v-model="value1"
+              />
             </div>
             <div class="col s12 m6 input-field">
               <!-- Input field for the second number they want to add -->
-              <label :class="[darkMode ? whiteText : '']" for="valueToAdd">Second Value</label>
-              <input :class="[darkMode ? whiteText : '']" type="text" v-model="value2" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToAdd"
+                >Second Value</label
+              >
+              <input
+                :class="[darkMode ? whiteText : '']"
+                type="text"
+                v-model="value2"
+              />
             </div>
           </div>
           <!-- This row contains the buttons for the IEEE 754 conversion -->
           <div class="row">
             <!-- This column contains a button that will convert floating point to IEEE 754 format -->
             <div class="col s12 m12">
-              <button class="btn" @click="addBinaryNumbers">Add Binary Numbers</button>
+              <button class="btn" @click="addBinaryNumbers">
+                Add Binary Numbers
+              </button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
@@ -36,7 +50,9 @@
             class="container move-down row center z-depth-4"
           >
             <div class="col s12">
-              <h5 :class="[darkMode ? whiteText : '']">The sum = {{ output }}</h5>
+              <h5 :class="[darkMode ? whiteText : '']">
+                The sum = {{ output }}
+              </h5>
             </div>
           </div>
         </div>
@@ -57,9 +73,13 @@
             :class="[darkMode ? whiteText : '']"
             :key="index"
             v-for="(operation, index) in binaryAdditionOperationsArr"
-          >{{ operation }}</h3>
+          >
+            {{ operation }}
+          </h3>
           <!-- Here we display the final answer -->
-          <h2 :class="[darkMode ? whiteText : '']">Final Answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">
+            Final Answer = {{ output }}
+          </h2>
         </div>
       </div>
     </transition>

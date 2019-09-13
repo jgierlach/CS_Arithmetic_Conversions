@@ -12,25 +12,29 @@
           <!-- This row contains the input tag that we will get the userInput from -->
           <div class="row">
             <div class="col s12 input-field">
-              <label :class="[darkMode ? whiteText : '']" for="valueToConvert">Value To Convert</label>
-              <input :class="[darkMode ? whiteText : '']" type="text" v-model="userInput" />
+              <label :class="[darkMode ? whiteText : '']" for="valueToConvert"
+                >Value To Convert</label
+              >
+              <input
+                :class="[darkMode ? whiteText : '']"
+                type="text"
+                v-model="userInput"
+              />
             </div>
           </div>
           <!-- This row contains the buttons for the initial conversions -->
           <div class="row">
             <!-- This column contains a button that will convert binary to decimal -->
             <div class="col s12 m6">
-              <button
-                class="btn button-margin"
-                @click="convertBinaryToDecimal"
-              >Convert Binary To Decimal</button>
+              <button class="btn button-margin" @click="convertBinaryToDecimal">
+                Convert Binary To Decimal
+              </button>
             </div>
             <!-- This column contains a button that will convert decimal to binary -->
             <div class="col s12 m6">
-              <button
-                class="btn button-margin"
-                @click="convertDecimalToBinary"
-              >Convert Decimal To Binary</button>
+              <button class="btn button-margin" @click="convertDecimalToBinary">
+                Convert Decimal To Binary
+              </button>
             </div>
           </div>
           <!-- This is where the user can immediately see the result of their conversion -->
@@ -42,10 +46,10 @@
             >
               <div class="col s12">
                 <h5 :class="[darkMode ? whiteText : '']">
-                  {{userInputSaved}}
-                  <sub>({{userInputBase}})</sub>
+                  {{ userInputSaved }}
+                  <sub>({{ userInputBase }})</sub>
                   = {{ output }}
-                  <sub>({{outputBase}})</sub>
+                  <sub>({{ outputBase }})</sub>
                 </h5>
               </div>
             </div>
@@ -72,13 +76,15 @@
             :class="[darkMode ? whiteText : '']"
             :key="index"
             v-for="(operation, index) in binaryToDecimalConversionArr"
-          >{{ operation }}</h3>
+          >
+            {{ operation }}
+          </h3>
           <!-- Here we display the final answer -->
           <h2 :class="[darkMode ? whiteText : '']">
-            {{userInputSaved}}
-            <sub>({{userInputBase}})</sub>
+            {{ userInputSaved }}
+            <sub>({{ userInputBase }})</sub>
             = {{ output }}
-            <sub>({{outputBase}})</sub>
+            <sub>({{ outputBase }})</sub>
           </h2>
         </div>
       </div>
@@ -99,13 +105,15 @@
             :class="[darkMode ? whiteText : '']"
             :key="index"
             v-for="(operation, index) in decimalToBinaryConversionArr"
-          >{{ operation }}</h3>
+          >
+            {{ operation }}
+          </h3>
           <!-- At the end of the conversion steps the final answer is displayed -->
           <h2 :class="[darkMode ? whiteText : '']">
-            {{userInputSaved}}
-            <sub>({{userInputBase}})</sub>
+            {{ userInputSaved }}
+            <sub>({{ userInputBase }})</sub>
             = {{ output }}
-            <sub>({{outputBase}})</sub>
+            <sub>({{ outputBase }})</sub>
           </h2>
         </div>
       </div>
