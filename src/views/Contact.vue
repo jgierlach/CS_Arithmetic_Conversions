@@ -13,7 +13,7 @@
           class="center padding move-down z-depth-4"
         >
           <form
-            action="https://formspree.io/jegierlach@gmail.com"
+            action="https://formspree.io/svnmgns@gmail.com"
             method="POST"
           >
             <!-- This row contains the name fields on the same line -->
