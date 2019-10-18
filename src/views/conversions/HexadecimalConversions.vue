@@ -125,7 +125,7 @@ export default {
         {
           name: 'description',
           content:
-            'This tool allows you to convert base 16 hexadecimal values to base 10 decimal, and base 10 decimal to base 16 hexadecimal. It shows you every step in the process, so you follow along and understand how these conversions happen.'
+            'This tool allows you to convert base 16 hexadecimal values to base 10 decimal, and base 10 decimal to base 16 hexadecimal. It shows you every step in the process, so you can follow along and understand how these conversions happen.'
         }
       ]
     }

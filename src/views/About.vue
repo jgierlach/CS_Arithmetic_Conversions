@@ -7,9 +7,8 @@
       >
         <div class="row">
           <div class="col s12">
-            <h3 :class="[darkMode ? whiteText : '']">
-              I appreciate you checking out this project. I built this site
-              because I wanted to learn and create something using Vuejs. I
+            <h3 :class="[darkMode ? whiteText : '']" class="line-height">
+              Hi, my name is <a href="https://sven-magnus.com/" target="blank">Sven Magnus</a>. I appreciate you checking out this project. I built this site because I wanted to learn and create something using Vuejs. I
               thought a resource like this would be helpful to students in intro
               level Computer Science classes. If you're interested in seeing the
               algorithms I wrote to do these operations you can find them
@@ -18,7 +17,7 @@
                 target="_blank"
                 >here</a
               >. If you have any questions or feedback feel free to
-              <a @click="contact">reach out</a>
+              <router-link to="/contact">reach out</router-link>
               to me.
             </h3>
           </div>
@@ -36,11 +35,6 @@ export default {
       meta: []
     }
   },
-  methods: {
-    contact() {
-      this.$router.push('/contact')
-    }
-  },
   data() {
     return {
       darkTextBackground: 'dark-text-background',
@@ -55,3 +49,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.line-height {
+  line-height: 1.3cm;
+}
+</style>
