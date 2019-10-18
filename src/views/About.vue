@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col s12">
             <h3 :class="[darkMode ? whiteText : '']" class="line-height">
-              Hi, my name is <a href="https://sven-magnus.com/" target="blank">Sven Magnus</a>. I appreciate you checking out this project. I built this site because I wanted to learn and create something using Vuejs. I
+              Hi, my name is <a href="https://sven-magnus.com/" target="_blank">Sven Magnus</a>. I appreciate you checking out this project. I built this site because I wanted to learn and create something using Vuejs. I
               thought a resource like this would be helpful to students in intro
               level Computer Science classes. If you're interested in seeing the
               algorithms I wrote to do these operations you can find them
