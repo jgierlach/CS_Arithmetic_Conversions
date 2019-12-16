@@ -39,6 +39,11 @@
               <h5 :class="[darkMode ? whiteText : '']">The sum = {{ output }}</h5>
             </div>
           </div>
+
+          <!-- Scroll down prompt -->
+          <div v-if="showSum">
+            <ScrollDown />
+          </div>
         </div>
       </div>
     </transition>
@@ -59,7 +64,7 @@
             v-for="(operation, index) in binaryAdditionOperationsArr"
           >{{ operation }}</h3>
           <!-- Here we display the final answer -->
-          <h2 :class="[darkMode ? whiteText : '']">Final Answer = {{ output }}</h2>
+          <h2 :class="[darkMode ? whiteText : '']">Final Sum = {{ output }}</h2>
         </div>
       </div>
     </transition>
@@ -67,14 +72,14 @@
 </template>
 
 <script>
-import ConversionHeader from '../../components/ConversionHeader'
+import ConversionHeader from '../../components/ConversionHeader.vue'
+import ScrollDown from '../../components/ScrollDown.vue'
 import {
   isEqualLength,
   theLongerValue,
-  // theShorterValue,
-  // differenceInLength,
   appendZeros
 } from '../../utils/binary_addition'
+
 export default {
   metaInfo() {
     return {
@@ -113,7 +118,8 @@ export default {
     }
   },
   components: {
-    ConversionHeader
+    ConversionHeader,
+    ScrollDown
   },
   methods: {
     addBinaryNumbers() {
