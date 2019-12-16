@@ -13,7 +13,10 @@ Vue.config.productionTip = false
 
 const router = new VueRouter({
   routes: routes,
-  mode: 'history'
+  mode: 'history',
+  scrollBehavior() {
+    window.scrollTo(0, 0)
+  }
 })
 
 const root = new Vue({
