@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <transition name="slide" appear>
+    <!-- <transition name="slide" appear>
       <div
         :class="[darkMode ? darkTextBackground : whiteBackground]"
         class="center padding move-down z-depth-4"
@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-    </transition>
+    </transition> -->
   </div>
 </template>
 
